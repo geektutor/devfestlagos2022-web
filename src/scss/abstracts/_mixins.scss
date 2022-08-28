@@ -1,0 +1,35 @@
+ /**
+ *  @stylesheet mixins.scss Mixins
+ *
+ *  Mixins
+ */
+
+@mixin tny {
+  @media only screen and (min-width: 335px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media only screen and (min-width: 640px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media only screen and (min-width: 1600px) {
+    @content;
+  }
+}

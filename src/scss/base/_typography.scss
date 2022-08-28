@@ -1,0 +1,46 @@
+/**
+ *  @stylesheet typography.scss Typography
+ *  @parent styleguide
+ *
+ *  Typography related styles
+ */
+
+/** Product Sans font */
+@font-face {
+  font-family: "Product Sans";
+  src: url("/assets/fonts/product-sans/product_sans_bold-webfont.woff2") format("woff2"),
+    url("/assets/fonts/product-sans/product_sans_bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans";
+  src: url("/assets/fonts/product-sans/product_sans_medium-webfont.woff2") format("woff2"),
+    url("/assets/fonts/product-sans/product_sans_medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans";
+  src: url("/assets/fonts/product-sans/product_sans_regular-webfont.woff2") format("woff2"),
+    url("/assets/fonts/product-sans/product_sans_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-size: 16px;
+  font-family: "Roboto Mono", monospace;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Product Sans";
+}
