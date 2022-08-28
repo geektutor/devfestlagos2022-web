@@ -1,0 +1,104 @@
+$colors: (
+
+  // Google Blue
+ blue: (
+  "900": #285092,
+  "800": #2E5DAB,
+  "700": #356AC3,
+  "600": #3B78DC,
+  "500": #4285F4,
+  "400": #5591F5,
+  "300": #689DF6,
+  "200": #7BAAF7,
+  "100": #8EB6F8,
+  "50": #C6DAFC,
+ ),
+
+  // Google Green
+  green: (
+    "900": #1F6532,
+    "800": #24763A,
+    "700": #2A8642,
+    "600": #2F974B,
+    "500": #34A853,
+    "400": #48B164,
+    "300": #5DB975,
+    "200": #71C287,
+    "100": #85CB98,
+    "50": #9AD4A9,
+  ),
+
+  // Google Red
+ red: (
+  "900": #8C2820,
+  "800": #A42F25,
+  "700": #BB362A,
+  "600": #D33C30,
+  "500": #EA4335,
+  "400": #EC5649,
+  "300": #EE695D,
+  "200": #F07B72,
+  "100": #F28E86,
+  "50": #F4A19A,
+ ),
+
+  // Google Yellow
+  yellow: (
+    "900": #977102,
+    "800": #B08403,
+    "700": #C99603,
+    "600": #E2A904,
+    "500": #FBBC04,
+    "400": #FBC31D,
+    "300": #FCC936,
+    "200": #FCD04F,
+    "100": #FBBC04,
+    "50": #FDDE82,
+  ),
+
+
+  // Google Grey
+  grey: (
+    "900": #202124,
+    "800": #36373A,
+    "700": #4D4D50,
+    "600": #636466,
+    "500": #797A7C,
+    "400": #BABBBE,
+    "300": #D1D3D5,
+    "200": #E8EAED,
+    "100": #EAECEF,
+    "50": #EDEEF1,
+  )
+);
+
+:root{
+  @each $group-name, $group in $colors {
+    @each $color-name, $color in $group {
+      --color-#{$group-name}-#{$color-name}: #{$color};
+    }
+  }
+
+  --color-black: #222222;
+  --color-white: #ffffff;
+}
+
+// Background color classes
+@each $group-name, $group in $colors {
+  @each $color-name, $color in $group {
+    .bg--#{$group-name}-#{$color-name} {
+      background-color: $color;
+    }
+  }
+}
+
+// text color classes
+@each $group-name, $group in $colors {
+  @each $color-name, $color in $group {
+    .cl--#{$group-name}-#{$color-name} {
+      color: $color;
+    }
+  }
+}
+
+

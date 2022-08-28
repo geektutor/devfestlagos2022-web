@@ -1,0 +1,66 @@
+/**
+ *  @stylesheet reset.scss Reset
+*  @parent styleguide
+ *
+ *  Contains styles to reset default browser styles on important elements.
+ */
+
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse:collapse;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+a {
+  color: inherit;
+  background-color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+a {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
