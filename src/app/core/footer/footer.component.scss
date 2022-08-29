@@ -1,0 +1,149 @@
+.main-footer {
+  background: #202124;
+  color: #ffffff;
+
+  .details-section {
+    padding: 3rem 0;
+    text-align: center;
+
+    .logo {
+      display: block;
+      margin: auto;
+    }
+
+    .about {
+      font-size: 0.95rem;
+      width: 70%;
+      margin: auto;
+      color: rgba(225, 225, 225, 0.8);
+      margin: 2rem auto 3rem;
+    }
+
+    .link-section {
+      margin: 2.5rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+
+      a {
+        text-decoration: underline;
+        font-weight: 500;
+        font-size: 0.875rem;
+      }
+    }
+
+    .icon-section {
+      display: flex;
+      justify-content: center;
+      gap: 1.8rem;
+      margin: 2.7rem 0;
+
+      img {
+        cursor: pointer;
+      }
+    }
+
+    .contact-btn {
+      background: #f7f9fb;
+      border-radius: 2px;
+      display: inline-block;
+      width: 140px;
+      padding: 0.8rem 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .all-right-section {
+    border-top: 1px solid rgba(225, 225, 225, 0.25);
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 991.9px) {
+  .main-footer {
+    .details-section {
+      padding: 2.7rem 0;
+      text-align: center;
+
+      .logo {
+        width: 250px;
+      }
+
+      .about {
+        width: 90%;
+        font-size: 0.93rem;
+        margin: 1.7rem auto 2rem;
+      }
+
+      .link-section {
+        margin: 2.5rem 0;
+        gap: 1.4rem;
+
+        a {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .all-right-section {
+      padding: 2.7rem 0;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .main-footer {
+    .details-section {
+      padding: 2rem 0;
+      text-align: center;
+
+      .logo {
+        width: 108px;
+      }
+
+      .about {
+        font-size: 0.655rem;
+        width: 95%;
+        margin: 1.5rem auto 1.7rem;
+      }
+
+      .link-section {
+        margin: 1.5rem 0;
+        gap: 1.2rem;
+
+        a {
+          font-size: 0.45rem;
+        }
+      }
+
+      .icon-section {
+        gap: 1.2rem;
+        margin: 1.7rem 0;
+
+        img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      .contact-btn {
+        width: 90px;
+        padding: 0.7rem 0.8rem;
+      }
+    }
+
+    .all-right-section {
+      padding: 2rem 0;
+      font-size: 0.5rem;
+    }
+  }
+}
