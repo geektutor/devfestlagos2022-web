@@ -1,0 +1,45 @@
+<mat-accordion hideToggle class="faq-accordion">
+  <mat-expansion-panel *ngFor="let faq of faqList">
+    <mat-expansion-panel-header [ngClass]="{ active: panelOpenState }">
+      <mat-panel-title> {{ faq.question }} </mat-panel-title>
+
+      <!-- Close icon -->
+      <svg
+        class="plus-close"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12.0007 22.6663V11.9997M12.0007 11.9997V1.33301M12.0007 11.9997H22.6673M12.0007 11.9997H1.33398"
+          stroke="#36373A"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+
+      <!-- Open icon -->
+      <svg
+        class="minus-open"
+        width="24"
+        height="2"
+        viewBox="0 0 24 2"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M22.6673 1H1.33398"
+          stroke="#4285F4"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+    </mat-expansion-panel-header>
+
+    <p class="details">
+      {{ faq.answer }}
+    </p>
+  </mat-expansion-panel>
+</mat-accordion>
