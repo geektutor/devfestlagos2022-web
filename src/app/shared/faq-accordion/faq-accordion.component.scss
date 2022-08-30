@@ -1,0 +1,119 @@
+::ng-deep {
+  .faq-accordion {
+    .mat-expansion-panel-header {
+      min-height: 67px;
+      height: auto;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    .mat-expansion-panel-header-title {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #4d4d50;
+      transition: all 0.2s ease-in-out;
+      margin-bottom: 0.5rem;
+    }
+
+    .minus-open {
+      opacity: 0;
+    }
+
+    .plus-close {
+      opacity: 1;
+    }
+
+    .plus-close,
+    .minus-open {
+      position: absolute;
+      right: 1.5rem;
+    }
+
+    .mat-expanded {
+      position: relative;
+
+      .mat-expansion-panel-header-title {
+        color: #4285f4;
+      }
+
+      .minus-open {
+        opacity: 1;
+      }
+
+      .plus-close {
+        opacity: 0;
+      }
+
+      svg {
+        transition: all 0.2s ease-in-out;
+
+        path {
+          stroke: #4285f4;
+        }
+      }
+    }
+
+    .mat-expansion-panel:not([class*="mat-elevation-z"]) {
+      box-shadow: unset;
+      border-bottom: 1px solid #babbbe;
+      margin-bottom: 2rem;
+    }
+
+    .details {
+      font-weight: 400;
+      font-size: 1.15rem;
+      margin: 0.5rem 2.5rem 0.5rem 0;
+    }
+  }
+
+  @media screen and (max-width: 991.9px) {
+    .faq-accordion {
+      .mat-expansion-panel-header {
+        min-height: 45px;
+      }
+
+      .mat-expansion-panel-header-title {
+        font-size: 1.15rem;
+      }
+
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+
+      .mat-expansion-panel:not([class*="mat-elevation-z"]) {
+        margin-bottom: 0.5rem;
+      }
+
+      .details {
+        font-size: 0.9rem;
+        margin: 0.3rem 2rem 0.3rem 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767.9px) {
+    .faq-accordion {
+      .mat-expansion-panel-header-title {
+        font-size: 0.75rem;
+      }
+
+      svg {
+        width: 10px;
+        height: 10px;
+      }
+
+      .mat-expansion-panel:not([class*="mat-elevation-z"]) {
+        margin-bottom: 1rem;
+      }
+
+      .details {
+        font-weight: 400;
+        font-size: 0.65rem;
+        margin: 0.25rem 1rem 0.25rem 0;
+      }
+    }
+  }
+}
