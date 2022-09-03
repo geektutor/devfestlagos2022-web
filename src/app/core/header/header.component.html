@@ -4,11 +4,11 @@
       <img src="assets/images/devfest-2022-logo.svg" alt="Devfest 2022 Logo" class="d22-logo">
     </a>
     <!-- class: site-nav__open -->
-    <nav class="site-nav" #nav>
+    <nav class="site-nav" [ngClass]="{ 'site-nav__open': isNavOpen }" #nav>
       <a class="mobile-reg-btn btn btn-blue">
         Register
       </a>
-      <button class="nav--btn">
+      <button class="nav--btn" (click)="toggleNav()">
         <div class="hmb"></div>
         <div class="hmb"></div>
         <div class="hmb"></div>
