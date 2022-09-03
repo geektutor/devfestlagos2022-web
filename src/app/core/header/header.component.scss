@@ -131,6 +131,11 @@ $z-nav-list: 150;
   min-height: 2.5rem;
   border-radius: 3px;
 
+  @include max-sm {
+    font-size: 1rem;
+    padding: 0.3rem 0.89rem;
+  }
+
   @include sm {
     margin-right: 1.5rem;
   }
