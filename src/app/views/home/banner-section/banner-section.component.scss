@@ -4,11 +4,7 @@
   display: block;
   background: rgb(255, 255, 242);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  padding: 2rem;
-
-  @include sm {
-    padding: 3rem;
-  }
+  padding: 0.85rem;
 
   @include md {
     padding: 2.1rem 0 2.2rem 0;
@@ -22,13 +18,24 @@
 }
 
 .banner--img {
+  height: 28vh;
   width: 100%;
   object-fit: cover;
+  object-position: left;
   margin: auto;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 36px 0px;
   border-radius: 5px;
 
+  @include tny {
+    height: 35vh;
+  }
+
+  @include sm {
+    height: unset;
+  }
+
   @include md {
+    height: unset;
     border-radius: 10px;
   }
 }
