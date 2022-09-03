@@ -6,14 +6,17 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    // RouterModule.,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     CoreModule,
+    AppRoutingModule,
     NoopAnimationsModule
   ],
   providers: [],
