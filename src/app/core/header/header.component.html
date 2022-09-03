@@ -1,6 +1,6 @@
 <header class="bg--grey-900 site-header cl--white">
   <div class="container">
-    <a href="/home" title="home">
+    <a routerLink="/home" title="home">
       <img src="assets/images/devfest-2022-logo.svg" alt="Devfest 2022 Logo" class="d22-logo">
     </a>
     <!-- class: site-nav__open -->
@@ -17,32 +17,32 @@
       </button>
       <ul class="nav--list">
         <li class="nav--item">
-          <a class="nav--link active">
+          <a class="nav--link" routerLink="/home" routerLinkActive="active">
             Home
           </a>
         </li>
         <li class="nav--item">
-          <a class="nav--link">
+          <a class="nav--link"  routerLink="/speakers" routerLinkActive="active">
             Speakers
           </a>
         </li>
         <li class="nav--item">
-          <a class="nav--link">
+          <a class="nav--link" routerLink="/sessions" routerLinkActive="active">
             Sessions
           </a>
         </li>
         <li class="nav--item">
-          <a class="nav--link">
+          <a class="nav--link" routerLink="/gallery" routerLinkActive="active" >
             Gallery
           </a>
         </li>
         <li class="nav--item">
-          <a class="nav--link">
+          <a class="nav--link" routerLink="/faqs" routerLinkActive="active">
             FAQs
           </a>
         </li>
         <li class="nav--item">
-          <a class="nav--link btn btn-outline_white">
+          <a class="nav--link btn btn-outline_white" routerLink="/contact" routerLinkActive="active">
             Contact Us
           </a>
         </li>

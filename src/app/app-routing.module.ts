@@ -28,6 +28,10 @@ const routes: Routes = [
     loadChildren: () => import('./views/gallery/gallery.module').then(m => m.GalleryModule)
   },
   {
+    path: 'contact',
+    loadChildren: () => import('./views/contact-us/contact-us.module').then(m => m.ContactUsModule)
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }
