@@ -23,13 +23,45 @@
 }
 
 @mixin lg {
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1280px) {
     @content;
   }
 }
 
 @mixin xl {
   @media only screen and (min-width: 1600px) {
+    @content;
+  }
+}
+
+
+// Max-width (desktop first)
+@mixin max-tny {
+  @media only screen and (max-width: 335px) {
+    @content;
+  }
+}
+
+@mixin max-sm {
+  @media only screen and (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin max-md {
+  @media only screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin max-lg {
+  @media only screen and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin max-xl {
+  @media only screen and (max-width: 1600px) {
     @content;
   }
 }

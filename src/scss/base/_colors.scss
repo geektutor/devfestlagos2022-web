@@ -92,6 +92,10 @@ $colors: (
   }
 }
 
+.bg--white {
+  background-color: white;
+}
+
 // text color classes
 @each $group-name, $group in $colors {
   @each $color-name, $color in $group {
@@ -101,4 +105,7 @@ $colors: (
   }
 }
 
+.cl--white {
+  color: white;
+}
 

@@ -1,0 +1,49 @@
+@use "/src/scss/abstracts/mixins" as *;
+
+:host {
+  display: block;
+  background: rgb(255, 255, 242);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 2rem;
+
+  @include sm {
+    padding: 3rem;
+  }
+
+  @include md {
+    padding: 2.1rem 0 2.2rem 0;
+  }
+}
+
+.container {
+  @include max-md {
+    padding: 0;
+  }
+}
+
+.banner--img {
+  width: 100%;
+  object-fit: cover;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 36px 0px;
+  border-radius: 5px;
+
+  @include md {
+    border-radius: 10px;
+  }
+}
+
+.banner--img__desktop {
+  display: none;
+
+  @include sm {
+    display: block;
+  }
+}
+
+.banner--img__mobile {
+  @include sm {
+    display: none;
+  }
+}
+
