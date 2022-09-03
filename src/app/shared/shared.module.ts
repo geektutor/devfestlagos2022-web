@@ -7,6 +7,6 @@ import { MaterialImportsModule } from './material/material.module';
 @NgModule({
   declarations: [SpeakerCardComponent, FaqAccordionComponent],
   imports: [CommonModule, MaterialImportsModule],
-  exports: [FaqAccordionComponent],
+  exports: [FaqAccordionComponent, SpeakerCardComponent],
 })
 export class SharedModule {}

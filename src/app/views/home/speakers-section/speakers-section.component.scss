@@ -1,0 +1,40 @@
+@use "/src/scss/abstracts/mixins" as *;
+
+:host {
+  display: block;
+  padding: 6rem 0 4rem 0;
+
+  @include lg {
+    padding: 8rem 0;
+  }
+}
+
+
+.sect--header {
+  margin: 0 0 5.5rem 0;
+}
+
+.speakers--list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 0 6rem 0;
+  gap: 3.3%;
+
+  @include lg {
+    gap: 5rem;
+  }
+}
+
+.speaker--item {
+  width: 30%;
+  margin-bottom: 2rem;
+  @include lg {
+    width: 100%;
+  }
+}
+
+.speakers-link{
+  margin: auto;
+}

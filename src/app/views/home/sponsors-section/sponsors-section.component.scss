@@ -1,0 +1,24 @@
+.sponsors--sect {
+  padding: 6rem 0 10rem 0;
+}
+
+.sect--header {
+  margin: 0 0 4.3rem 0;
+}
+
+.sponsor--list {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.sponsor--item {
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  box-shadow: 0px 30px 40px rgba(212, 217, 232, 0.2);
+  height: 6rem;
+  width: 10.625rem;
+}

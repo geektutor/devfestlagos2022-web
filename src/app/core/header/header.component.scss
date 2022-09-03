@@ -1,3 +1,186 @@
-.container {
-  height: 50px;
+@use "/src/scss/abstracts/mixins" as *;
+
+$z-nav-btn: 200;
+$z-nav-list: 150;
+
+.site-header > .container {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 4rem;
+
+  @include lg {
+    min-height: 5.2625rem;
+  }
 }
+
+.d22-logo {
+  max-width: 9rem;
+
+  @include md {
+    max-width: 10.5rem;
+  }
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav--list {
+  display: none;
+  width: 100%;
+
+  @include lg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.45rem;
+    padding: 0;
+    background: none;
+    min-height: unset;
+    position: static;
+  }
+
+  @include max-lg {
+    .site-nav__open & {
+      display: flex;
+      padding-left: 1.125rem;
+      padding-right: 1.125rem;
+      position: absolute;
+      flex-direction: column;
+      gap: 0.88rem;
+      z-index: $z-nav-list;
+      left: 0;
+      top: 0;
+      min-height: 100vh;
+      padding-top: 4.94rem;
+      background-color: var(--color-white);
+
+      @include sm {
+        text-align: center;
+        // align-items: center;
+      }
+    }
+  }
+}
+
+.nav--link:not(.btn) {
+  display: block;
+  font-size: 1.12rem;
+  font-family: "Product Sans";
+  padding: 0 0.625rem;
+  min-height: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 2px;
+  transition: 200ms background-color;
+  cursor: pointer;
+
+  &.active {
+    color: var(--color-blue-300);
+    border-bottom: 2px solid var(--color-blue-300);
+  }
+
+  &:hover:not(.active) {
+    background-color: var(--color-grey-800);
+  }
+}
+
+/** Link styles when navbar is open */
+@include max-lg {
+  .site-nav__open .nav--link {
+    width: 100%;
+
+    @include sm {
+      max-width: 300px;
+      margin: auto;
+    }
+
+    &:not(.btn) {
+      color: var(--color-grey-700);
+      line-height: 2.8rem;
+
+      &.active {
+        background-color: #f7f9fb;
+        border: none;
+      }
+
+      &:hover {
+        background-color: var(--color-grey-200);
+      }
+    }
+
+    /**
+    * Override white outline button to dark because of white background
+    */
+    &.btn-outline_white {
+      border-color: var(--color-black);
+      color: var(--color-black);
+
+      &:hover {
+        background-color: var(--color-grey-100);
+      }
+    }
+  }
+}
+
+/** Shows up on header on mobile, dissapears on desktop */
+.mobile-reg-btn {
+  margin-right: 1.25rem;
+  min-height: 2.5rem;
+  border-radius: 3px;
+
+  @include sm {
+    margin-right: 1.5rem;
+  }
+
+  @include md {
+    margin-right: 2.4rem;
+  }
+
+  @include lg {
+    display: none;
+  }
+}
+
+/** Nav menu toggle button */
+.nav--btn {
+  position: relative;
+  z-index: $z-nav-btn;
+  background: none;
+  width: 1.5rem;
+  height: 1.3rem;
+
+  .hmb {
+    position: absolute;
+    left: 0;
+    height: 0.15rem;
+    background-color: var(--color-white);
+    width: 1.5rem;
+
+    .site-nav__open & {
+      background-color: var(--color-black);
+    }
+  }
+
+
+
+  .hmb:nth-child(1) {
+    top: 0;
+  }
+  .hmb:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    // width: 1.135rem;
+  }
+  .hmb:nth-child(3) {
+    // width: 0.7rem;
+    bottom: 0;
+  }
+
+  @include lg {
+    display: none;
+  }
+}
+

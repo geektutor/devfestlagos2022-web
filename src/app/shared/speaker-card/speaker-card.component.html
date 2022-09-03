@@ -1,1 +1,31 @@
-<p>speaker-card works!</p>
+<article class="speaker--card" *ngIf="speakerInfo">
+
+  <div class="speaker--img-wrp">
+    <!-- TODO: Add failsafe silhoete abi how them dey spell am -->
+    <div class="speaker--img-bg"></div>
+    <img src="assets/images/social-avatar/test-img.jpg" [alt]="'Photo of ' + speakerInfo.name" class="speaker--img" />
+  </div>
+  <header>
+    <h2 class="speaker--name  cl--blue-500">{{ speakerInfo.name }}</h2>
+    <p class="speaker--job-title cl--grey-600">
+      {{ speakerInfo.jobTitle }}<span class="speaker--company" *ngIf="speakerInfo.company"> &nbsp;@{{ speakerInfo.company }}</span>
+    </p>
+  </header>
+
+  <p class="speaker--desc cl--grey-600">
+    {{ speakerInfo.description }}
+  </p>
+
+  <ul class="speaker--socials social--list">
+    <li class="speaker--git social--item">
+      <a href="" class="social--link"></a>
+    </li>
+    <li class="speaker--twitter social--item">
+      <a href="" class="social--link"></a>
+    </li>
+    <li class="speaker--linkedin social--item">
+      <a href="" class="social--link"></a>
+    </li>
+
+  </ul>
+</article>
