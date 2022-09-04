@@ -7,12 +7,17 @@
   margin-right: auto;
   margin-left: auto;
 
+  @include tny {
+    max-width: 95%;
+    padding-right: 8px;
+    padding-left: 9px;
+  }
+
   @include sm {
     max-width: 90%;
     padding-right: 15px;
     padding-left: 15px;
   }
-
 
   @include md {
   }
@@ -23,5 +28,38 @@
 
   @include xl {
     max-width: 1500px;
+  }
+}
+
+.btn {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: 500;
+
+  @include md {
+    // padding: 0.85rem 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  @include sm {
+    padding: 0.8rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  @include tny {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  @include xtny {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.6rem;
+  }
+
+  &:hover {
+    transform: scale(1.05);
   }
 }

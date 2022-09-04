@@ -46,15 +46,8 @@
     .contact-btn {
       background: #f7f9fb;
       border-radius: 2px;
-      display: inline-block;
       width: 140px;
-      padding: 0.8rem 1rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-
-      &:hover {
-        transform: scale(1.05);
-      }
+      margin: 0 auto;
     }
   }
 
@@ -136,8 +129,7 @@
       }
 
       .contact-btn {
-        width: 90px;
-        padding: 0.7rem 0.8rem;
+        width: 110px;
       }
     }
 
