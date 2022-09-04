@@ -1,3 +1,5 @@
+@use "/src/scss/abstracts/mixins" as *;
+
 :host {
   display: inline-block;
   width: 100%;
@@ -19,7 +21,7 @@
   padding-bottom: 100%;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 0 3rem 0;
+  margin: 0 0 2rem 0;
 
   &::after {
     content: "";
@@ -68,10 +70,18 @@
   font-weight: 500;
   font-size: 1.55rem;
   margin: 0 0 1.45rem 0;
+
+  @include xtny {
+    font-size: 1.25rem;
+  }
 }
 
 .speaker--job-title {
   margin: 0 0 0.8rem 0;
+
+  @include xtny {
+    font-size: .95rem;
+  }
 }
 
 .speaker--company {
@@ -80,4 +90,8 @@
 
 .speaker--desc {
   line-height: 170%;
+
+  @include xtny {
+    font-size: .75rem;
+  }
 }

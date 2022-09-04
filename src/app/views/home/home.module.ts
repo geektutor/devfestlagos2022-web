@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { BannerSectionComponent } from './banner-section/banner-section.component';
 import { SpeakersSectionComponent } from './speakers-section/speakers-section.component';
 import { SponsorsSectionComponent } from './sponsors-section/sponsors-section.component';
+
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { SponsorsSectionComponent } from './sponsors-section/sponsors-section.co
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SharedModule
+    SharedModule,
+    CarouselModule
   ]
 })
 export class HomeModule { }
