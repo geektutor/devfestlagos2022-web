@@ -2,46 +2,61 @@
 
 :host {
   display: block;
-  padding: 5rem 0 4rem 0;
+  padding: 2.2rem 0 4rem 0;
 
   @include lg {
-    padding: 5rem 0;
+    padding: 6rem 0 4rem 0;
+    padding: 8rem 0;
   }
 }
 
-.header-section {
-  .title {
-    margin-bottom: 2rem;
+.sect--header {
+  margin: 0 0 2.5rem 0;
+
+  @include lg {
+    margin: 0 0 4rem 0;
   }
 }
 
 .speakers--list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 0 6rem 0;
-  gap: 3.3%;
+  margin: 0 0 5rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.9375rem;
+  row-gap: 3rem;
+  justify-items: center;
 
   @include lg {
-    gap: 5rem;
+    margin: 0 0 1rem 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7%;
   }
 }
 
 .speaker--item {
-  width: 30%;
-  margin-bottom: 2rem;
 
-  @include xtny {
-    width: 45%;
+  @include max-lg {
+    width: 30vw;
+    max-width: 15.6rem;
   }
 
-  @include md {
-    width: 30%;
+  @include max-sm {
+    width: 38vw;
   }
 
   @include lg {
+    margin-bottom: 5rem;
     width: 100%;
+  }
+  @include max-lg {
+    // 3rd card stays in the middle
+    &:nth-child(3n) {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
   }
 }
 

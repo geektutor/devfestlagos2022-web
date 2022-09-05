@@ -1,0 +1,92 @@
+<section class="session-section">
+  <div class="over-lay"></div>
+  <div class="container">
+    <div class="grid-container">
+      <div class="session-detail">
+        <div class="header-section">
+          <h4 class="title">Sessions</h4>
+        </div>
+        <p class="desc">
+          We have a lineup of exciting and informative sessions for you, ranging
+          from technical talks to lightning talks, panel sessions, and more.
+          You're definitely in for a swell time.
+        </p>
+        <div class="btn-img-container">
+          <button class="btn view-session-btn">View All Sessions</button>
+          <img
+            src="../../../assets/images/DF22-footer.svg"
+            alt="DevFest 2022"
+          />
+        </div>
+      </div>
+
+      <div class="session-list">
+        <owl-carousel-o [options]="customOptions">
+          <ng-template carouselSlide>
+            <div class="sesssion-card">
+              <div class="profile">
+                <img
+                  src="../../../assets/images/avatar-me.jpg"
+                  alt="session photo"
+                />
+                <h5 class="name">Oluwatobi Peter</h5>
+                <P class="role">Software Developer,</P>
+                <P class="company">Google</P>
+              </div>
+
+              <div class="detail">
+                <p class="location">Lagos, Nigeria</p>
+                <div class="desc">
+                  Implementing Micro-Frontend Architecture with Angular and
+                  other core Angukar Features
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="sesssion-card">
+              <div class="profile">
+                <img
+                  src="../../../assets/images/avatar.png"
+                  alt="session photo"
+                />
+                <h5 class="name">Manoj Raw</h5>
+                <P class="role">Software Developer,</P>
+                <P class="company">Ivy</P>
+              </div>
+
+              <div class="detail">
+                <p class="location">India</p>
+                <div class="desc">
+                  Implementing Micro-Frontend Architecture with Angular and
+                  other core Angukar Features
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="sesssion-card">
+              <div class="profile">
+                <img
+                  src="../../../assets/images/avatar.png"
+                  alt="session photo"
+                />
+                <h5 class="name">Boluwatife</h5>
+                <P class="role">Technical Product Manager,</P>
+                <P class="company">Google</P>
+              </div>
+
+              <div class="detail">
+                <p class="location">India</p>
+                <div class="desc">
+                  Implementing Micro-Frontend Architecture with Angular and
+                  other core Angukar Features
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</section>

@@ -31,35 +31,40 @@
   }
 }
 
-.btn {
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  border-radius: 4px;
-  display: inline-block;
-  font-weight: 500;
 
-  @include md {
-    // padding: 0.85rem 1rem;
-    padding: 1rem;
-    font-size: 1rem;
-  }
-
-  @include sm {
-    padding: 0.8rem 1rem;
-    font-size: 0.875rem;
-  }
-
-  @include tny {
-    padding: 0.5rem;
-    font-size: 0.8rem;
-  }
-
-  @include xtny {
-    padding: 0.4rem 0.5rem;
-    font-size: 0.6rem;
-  }
-
-  &:hover {
-    transform: scale(1.05);
-  }
+.section-spacing {
+  margin: 5rem auto;
 }
+
+// .btn {
+//   transition: all 0.3s ease-in-out;
+//   cursor: pointer;
+//   border-radius: 4px;
+//   display: inline-block;
+//   font-weight: 500;
+
+//   @include md {
+//     // padding: 0.85rem 1rem;
+//     padding: 1rem;
+//     font-size: 1rem;
+//   }
+
+//   @include sm {
+//     padding: 0.8rem 1rem;
+//     font-size: 0.875rem;
+//   }
+
+//   @include tny {
+//     padding: 0.5rem;
+//     font-size: 0.8rem;
+//   }
+
+//   @include xtny {
+//     padding: 0.4rem 0.5rem;
+//     font-size: 0.6rem;
+//   }
+
+//   &:hover {
+//     transform: scale(1.05);
+//   }
+// }

@@ -1,0 +1,66 @@
+.faq-section {
+  .header-section {
+    text-align: center;
+  }
+
+  .faq-container {
+    width: 75%;
+    margin: 4.5rem auto;
+  }
+
+  .btn {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 991.9px) {
+  .section-spacing {
+    margin: 4.5rem auto;
+  }
+
+  .faq-section {
+    .faq-container {
+      width: 85%;
+    }
+
+    .btn {
+      margin: 1rem auto;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .section-spacing {
+    margin: 4rem auto;
+  }
+
+  .gallery-section {
+    margin: 3rem auto;
+
+    .header-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .gallery-img-section {
+      gap: 0.3rem;
+
+      .box-1 {
+        gap: 0.3rem;
+      }
+
+      .box-1,
+      .box-2 {
+        height: 250px !important;
+      }
+    }
+  }
+
+  .faq-section {
+    margin: 3rem auto;
+
+    .faq-container {
+      width: 90%;
+      margin: 3rem auto;
+    }
+  }
+}

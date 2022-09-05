@@ -1,0 +1,299 @@
+.session-section {
+  position: relative;
+  background: #202124;
+  color: #ffffff;
+  padding: 4rem 0;
+  // height: 500px;
+
+  .over-lay {
+    background: #c6dafc;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .session-detail {
+      padding-right: 2rem;
+
+      .header-section {
+        color: #ffffff;
+      }
+
+      .desc {
+        font-size: 1rem;
+        margin: 2rem 2.5rem 2.3rem 0;
+      }
+
+      .btn-img-container {
+        display: block;
+        position: relative;
+        height: 130px;
+
+        .view-session-btn {
+          border: 1px solid #ffffff;
+          color: #ffffff;
+          background-color: transparent;
+          // margin-bottom: 4rem;
+        }
+
+        img {
+          height: 35px;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+
+    .session-list {
+      position: absolute;
+      right: 0;
+      z-index: 2;
+      height: 350px;
+      width: 50%;
+      padding: 0rem 0 0rem 2rem;
+
+      .sesssion-card {
+        background-image: url("/assets/images/session-card.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 300px;
+        width: 500px;
+        display: grid;
+        grid-template-columns: 167px calc(100% - 186.2px);
+        gap: 1.2rem;
+
+        .profile {
+          height: 100%;
+          margin: 0 0 0 10px;
+
+          img {
+            width: 157px;
+            height: 160px;
+          }
+
+          .name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 1rem 0 0.5rem;
+          }
+          .role,
+          .company {
+            font-size: 0.65rem;
+            margin-bottom: 0.25rem;
+          }
+        }
+
+        .detail {
+          .location {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #34a853;
+            margin: 2rem 0 0 2rem;
+          }
+
+          .desc {
+            margin: 2rem 3.2rem 0 0;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 991.9px) {
+  .section-spacing {
+    margin: 4.5rem auto;
+  }
+
+  .session-section {
+    padding: 3rem 0;
+
+    .grid-container {
+      .session-detail {
+        padding-right: 1.5rem;
+
+        .desc {
+          font-size: 0.9rem;
+          margin: 1.5rem 2rem 1.5rem 0;
+        }
+
+        .btn-img-container {
+          height: 100px;
+
+          img {
+            height: 25px;
+            width: 150px;
+          }
+        }
+      }
+
+      .session-list {
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        height: 350px;
+        width: 50%;
+        padding: 0rem 0 0rem 2rem;
+
+        .sesssion-card {
+          height: 270px;
+          width: 450px;
+          display: grid;
+          grid-template-columns: 150px calc(100% - 186.2px);
+          gap: 1rem;
+
+          .profile {
+            height: 100%;
+            margin: 0 0 0 10px;
+
+            img {
+              width: 140px;
+              height: 160px;
+            }
+
+            .name {
+              font-size: 0.875rem;
+              margin: 0.5rem 0 0.25rem;
+            }
+            .role,
+            .company {
+              font-size: 0.6rem;
+              margin-bottom: 0.2rem;
+            }
+          }
+
+          .detail {
+            .location {
+              font-size: 0.8rem;
+              margin: 1.65rem 0 0 2rem;
+            }
+
+            .desc {
+              font-size: 0.85rem;
+              margin: 2rem 2rem 0 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 640px) {
+  .session-section {
+    padding: unset;
+
+    .container {
+      padding: 0;
+    }
+
+    .over-lay {
+      position: unset;
+    }
+
+    .grid-container {
+      grid-template-columns: 100%;
+      margin-bottom: 350px;
+
+      .session-detail {
+        padding: 2rem 1rem;
+        text-align: center;
+        height: 350px;
+
+        .desc {
+          font-size: 0.875rem;
+          margin: 2rem 0 2.3rem;
+        }
+
+        .btn-img-container {
+          display: flex;
+          align-items: flex-end;
+          position: relative;
+          height: 95px;
+
+          .view-session-btn {
+            display: block;
+            margin: 0 auto;
+          }
+
+          img {
+            width: 110px;
+            height: 17px;
+            position: absolute;
+            top: 0;
+            right: 50%;
+            margin-right: -55px;
+          }
+        }
+      }
+
+      .session-list {
+        background: #c6dafc;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 350px;
+        z-index: 2;
+        height: 300px;
+        width: 100%;
+        padding: 2rem 0 2rem 1rem;
+
+        .sesssion-card {
+          height: 190px;
+          width: 320px;
+          display: grid;
+          grid-template-columns: 107px calc(100% - 123px);
+          gap: 1rem;
+
+          .profile {
+            height: 100%;
+            margin: 0 0 0 10px;
+
+            img {
+              width: 140px;
+              height: 100px;
+            }
+
+            .name {
+              font-size: 0.6rem;
+              margin: 0.3rem 0 0.15rem;
+            }
+            .role,
+            .company {
+              font-size: 0.4rem;
+              margin-bottom: 0.1rem;
+            }
+          }
+
+          .detail {
+            .location {
+              font-size: 0.6rem;
+              margin: 1.35rem 0 0 1rem;
+            }
+
+            .desc {
+              font-size: 0.65rem;
+              margin: 1rem 2.1rem 0 0.1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-spacing {
+    margin: 4rem auto;
+  }
+
+}

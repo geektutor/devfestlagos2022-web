@@ -8,6 +8,11 @@ import { HomeComponent } from './home.component';
 import { BannerSectionComponent } from './banner-section/banner-section.component';
 import { SpeakersSectionComponent } from './speakers-section/speakers-section.component';
 import { SponsorsSectionComponent } from './sponsors-section/sponsors-section.component';
+import { SessionsSectionComponent } from './sessions-section/sessions-section.component';
+import { GallerySectionComponent } from './gallery-section/gallery-section.component';
+import { EventsDetailsSectionComponent } from './events-details-section/events-details-section.component';
+import { FaqSectionComponent } from './faq-section/faq-section.component';
+import { IntroSectionComponent } from './intro-section/intro-section.component';
 
 
 
@@ -16,7 +21,12 @@ import { SponsorsSectionComponent } from './sponsors-section/sponsors-section.co
     HomeComponent,
     BannerSectionComponent,
     SpeakersSectionComponent,
-    SponsorsSectionComponent
+    SponsorsSectionComponent,
+    SessionsSectionComponent,
+    GallerySectionComponent,
+    EventsDetailsSectionComponent,
+    FaqSectionComponent,
+    IntroSectionComponent
   ],
   imports: [
     CommonModule,
