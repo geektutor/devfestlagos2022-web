@@ -1,1 +1,11 @@
-<p>speakers works!</p>
+<div class="container">
+  <app-page-title
+    [title]="title"
+    [hasSearch]="true"
+    [formDetails]="formData"
+    (handleSearch)="searchSpeaker($event)"
+    (handleSelectFilter)="selectSpeaker($event)"
+  ></app-page-title>
+
+  <section></section>
+</div>

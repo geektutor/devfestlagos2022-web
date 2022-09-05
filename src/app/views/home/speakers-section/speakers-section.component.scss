@@ -31,12 +31,17 @@
 .speaker--item {
   width: 30%;
   margin-bottom: 2rem;
-  @include lg {
-    width: 100%;
+
+  @include xtny {
+    width: 45%;
   }
 
-  @include xtny{
-    width: 45%;
+  @include md {
+    width: 30%;
+  }
+
+  @include lg {
+    width: 100%;
   }
 }
 

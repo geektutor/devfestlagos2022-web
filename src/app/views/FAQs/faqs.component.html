@@ -1,1 +1,25 @@
-<p>faqs works!</p>
+<div class="container">
+  <app-page-title [title]="title" [hasSearch]="false"></app-page-title>
+
+  <header class="page-header">
+    <h5 class="title">Frequently Asked Questions</h5>
+    <p class="desc">
+      Discover answers to frequently asked questions about DevFest Lagos.
+    </p>
+  </header>
+
+  <section class="faq-section">
+    <div class="faq-holder">
+      <app-faq-accordion [faqList]="faqList"></app-faq-accordion>
+
+      <div class="faq-footer">
+        <h6>Still got questions?</h6>
+        <p>
+          If you cannot find answers to your questions, you can
+          <span routerLink="contact">contact</span> us and we would answer to
+          you shortly.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

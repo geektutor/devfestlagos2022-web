@@ -20,7 +20,7 @@
   text-align: center;
 }
 
-// Margin
+// Carousel style (Owl library)
 
 .session-list {
   .owl-carousel .owl-item {
@@ -84,9 +84,11 @@
   }
 }
 
+// Header section
+
 .header-section {
   color: #202124;
-  margin: 0.5rem .5rem 2rem;
+  margin: 0.5rem 0.5rem 2rem;
 
   .title {
     font-size: 3rem;
@@ -125,5 +127,40 @@
       font-size: 0.9rem;
       width: 90%;
     }
+  }
+}
+
+// Form styles
+
+.form-control {
+  height: 55px;
+  width: 100%;
+  border: 0.5px solid #797a7c;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 1.15rem 1rem;
+  transition: 0.3s all ease-in-out;
+
+  &:focus {
+    border-width: 1px;
+    border-color: #4285f4;
+    color: #4285f4;
+
+    svg path {
+      stroke: #4285f4;
+    }
+  }
+}
+
+.form-control:focus-visible {
+  outline: unset !important;
+}
+
+@media screen and (max-width: 767.9px) {
+  .form-control {
+    height: 40px;
+    font-size: 0.875rem;
+    padding: .5rem 1rem;
   }
 }

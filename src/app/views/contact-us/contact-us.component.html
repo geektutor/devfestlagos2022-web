@@ -1,1 +1,65 @@
-<p>contact-us works!</p>
+<div class="container">
+  <app-page-title [title]="title" [hasSearch]="false"></app-page-title>
+
+  <section class="contact-section">
+    <img
+      src="../../../assets/images/contact-bg.png"
+      alt="contact us background"
+      class="contact-bg"
+    />
+
+    <div class="contact-form-section">
+      <ul class="event-details-list">
+        <li>
+          <img
+            src="../../../assets/images/icons/carlender-icon.svg"
+            alt="calendar"
+            width="18"
+            height="18"
+          />
+          <span>December 3rd, 2022</span>
+        </li>
+
+        <li>
+          <img
+            src="../../../assets/images/icons/email-icon.svg"
+            alt="calendar"
+            width="18"
+            height="18"
+          />
+          <span>team@gdglagos.com</span>
+        </li>
+
+        <li>
+          <img
+            src="../../../assets/images/icons/location-icon.svg"
+            alt="calendar"
+            width="18"
+            height="18"
+          />
+          <span
+            >Plot 3 & 4, Water Corporation Road, Victoria Island - Lagos</span
+          >
+        </li>
+      </ul>
+
+      <div class="form-container">
+        <form>
+          <input class="form-control" type="text" placeholder="Full Name" />
+          <input
+            class="form-control"
+            type="email"
+            placeholder="Email Address"
+          />
+          <textarea
+            class="form-control"
+            placeholder="Your Message"
+            rows="5"
+          ></textarea>
+
+          <button type="submit" class="btn btn-blue">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
