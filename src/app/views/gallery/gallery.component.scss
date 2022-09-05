@@ -1,11 +1,12 @@
 @use "/src/scss/abstracts/mixins" as *;
 
 .gallery-sect {
-  padding: 6rem 0 10rem 0;
+  margin-bottom: 5rem;
+  // padding: 6rem 0 10rem 0;
 
-  @include md {
-    padding: 7rem 0 9.5rem;
-  }
+  // @include md {
+  //   padding: 7rem 0 9.5rem;
+  // }
 }
 
 // Placeholder
@@ -22,28 +23,44 @@
 //   border: 0.03125rem solid var(--color-grey-400);
 // }
 
-.sect--header {
-  margin: 0 0 3.75rem 0;
+// .sect--header {
+//   margin: 0 0 3.75rem 0;
 
-  @include lg {
-    margin: 0 0 5.8rem 0;
+//   @include lg {
+//     margin: 0 0 5.8rem 0;
+//   }
+// }
+
+// .sect--title {
+//   margin-bottom: 1.5rem;
+
+//   @include lg {
+//     font-size: 2.26rem;
+//   }
+// }
+
+// .sect--lead {
+//   @include max-sm {
+//     font-size: 1.1rem;
+//   }
+//   @include lg {
+//     font-size: 1.28rem;
+//   }
+// }
+
+.page-header {
+  text-align: center;
+  color: #000000;
+  margin: 4rem 0;
+
+  .title {
+    font-size: 2.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
   }
-}
-
-.sect--title {
-  margin-bottom: 1.5rem;
-
-  @include lg {
-    font-size: 2.26rem;
-  }
-}
-
-.sect--lead {
-  @include max-sm {
-    font-size: 1.1rem;
-  }
-  @include lg {
-    font-size: 1.28rem;
+  .desc {
+    font-weight: 400;
+    font-size: 1.2rem;
   }
 }
 
@@ -67,7 +84,6 @@
   &:not(:first-child) {
     padding-top: 4rem;
   }
-
 
   @include md {
     display: grid;
@@ -104,7 +120,6 @@
   font-size: 1.4rem;
   font-weight: 500;
   margin: 0 0 1.8rem 0;
-
 
   @include lg {
     margin: 0 0 2rem 0;
@@ -161,7 +176,6 @@
   margin: 0 auto 3.45rem auto;
   position: relative;
 
-
   @include sm {
     width: 85%;
     padding-bottom: 52%;
@@ -201,4 +215,30 @@
 
 .timeline--img__sub2 {
   left: 51%;
+}
+
+@media screen and (max-width: 991px) {
+  .page-header {
+    margin: 3.5rem 0;
+
+    .title {
+      font-size: 1.75rem;
+    }
+    .desc {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .page-header {
+    margin: 2.5rem 0;
+
+    .title {
+      font-size: 1.25rem;
+    }
+    .desc {
+      font-size: 0.95rem;
+    }
+  }
 }

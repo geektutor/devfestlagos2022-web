@@ -1,0 +1,101 @@
+<div class="header-section">
+  <div class="header-container">
+    <h3 class="title">{{ title }}</h3>
+
+    <div class="input-section" *ngIf="hasSearch">
+        <!-- Mobile search icon -->
+      <div class="mobile-search">
+        <svg
+          width="25"
+          height="24"
+          viewBox="0 0 25 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.9199 19C16.3382 19 19.9199 15.4183 19.9199 11C19.9199 6.58172 16.3382 3 11.9199 3C7.50164 3 3.91992 6.58172 3.91992 11C3.91992 15.4183 7.50164 19 11.9199 19Z"
+            stroke="#797A7C"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M21.9203 20.9999L17.5703 16.6499"
+            stroke="#797A7C"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+
+      <div class="input-container">
+        <svg
+          width="25"
+          height="24"
+          viewBox="0 0 25 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.9199 19C16.3382 19 19.9199 15.4183 19.9199 11C19.9199 6.58172 16.3382 3 11.9199 3C7.50164 3 3.91992 6.58172 3.91992 11C3.91992 15.4183 7.50164 19 11.9199 19Z"
+            stroke="#797A7C"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M21.9203 20.9999L17.5703 16.6499"
+            stroke="#797A7C"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <input
+          #inputValue
+          class="form-control"
+          type="text"
+          [placeholder]="formDetails.placeholder"
+          (change)="handleSearch(inputValue.value)"
+        />
+      </div>
+
+      <select class="form-control">
+        <option>{{ formDetails.dropdownTitle }}</option>
+        <option
+          *ngFor="let item of formDetails.dropDownItem"
+          (click)="handleSelectFilter(item.name)"
+        >
+          {{ item.name }}
+        </option>
+      </select>
+
+      <!-- <div class="dropdown form-control" [matMenuTriggerFor]="menu">
+        <span class="title">{{ formDetails.dropdownTitle }}</span>
+        <svg
+          width="14"
+          height="8"
+          viewBox="0 0 14 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.08008 1L7.08008 7L13.0801 1"
+            stroke="#4285F4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<!-- <mat-menu #menu="matMenu">
+  <ul class="menu-list">
+    <li>{{ formDetails.dropdownTitle }}</li>
+    <li
+      *ngFor="let item of formDetails.dropDownItem"
+      (click)="handleSelectFilter(item.name)"
+    >
+      {{ item.name }}
+    </li>
+  </ul>
+</mat-menu> -->

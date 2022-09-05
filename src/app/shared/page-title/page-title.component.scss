@@ -1,0 +1,134 @@
+.header-section {
+  margin: 0.5rem 0rem 2rem;
+}
+.header-container {
+  padding: 3rem 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid #babbbe;
+
+  .title {
+    margin: 0 1rem 0 0;
+    color: #4285f4;
+  }
+
+  .input-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .mobile-search {
+      display: none;
+    }
+
+    .input-container {
+      min-width: 300px;
+      position: relative;
+
+      svg {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        width: 25px;
+        height: 25px;
+      }
+
+      input {
+        padding-left: calc(1rem + 25px + 0.5rem);
+      }
+    }
+
+    select {
+      color: #4285f4;
+      width: 170px;
+    }
+
+    .dropdown {
+      position: relative;
+      cursor: pointer;
+
+      span {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #4285f4;
+        margin-right: 2rem;
+      }
+
+      svg {
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .header-container {
+    padding: 2.5rem 0.2rem 1rem;
+
+    .input-section {
+      .mobile-search {
+        background: #eaecef;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+
+        svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
+
+      .input-container {
+        display: none;
+        min-width: 180px;
+
+        svg {
+          top: 0.7rem;
+          left: 0.5rem;
+          width: 20px;
+          height: 20px;
+        }
+
+        input {
+          padding-left: calc(0.5rem + 20px + 0.5rem);
+        }
+      }
+
+      select {
+        width: 120px;
+      }
+    }
+  }
+}
+
+::ng-deep {
+  .mat-menu-content {
+    min-width: 200px;
+
+    .menu-list {
+      li {
+        padding: 1rem 0.8rem;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        color: #797a7c;
+        transition: 0.3s all ease-in-out;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.15);
+        }
+
+        &:first-child {
+          background: #c6dafc;
+          color: #4285f4;
+        }
+      }
+    }
+  }
+}

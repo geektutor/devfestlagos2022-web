@@ -84,7 +84,7 @@
       }
 
       .mat-expansion-panel:not([class*="mat-elevation-z"]) {
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
       }
 
       .details {
@@ -105,9 +105,9 @@
         height: 10px;
       }
 
-      .mat-expansion-panel:not([class*="mat-elevation-z"]) {
-        margin-bottom: 1rem;
-      }
+      // .mat-expansion-panel:not([class*="mat-elevation-z"]) {
+      //   margin-bottom: 1rem;
+      // }
 
       .details {
         font-weight: 400;
