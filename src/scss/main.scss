@@ -153,6 +153,14 @@
   }
 }
 
+.form-control::placeholder,
+.form-control::-webkit-input-placeholder,
+.form-control:-moz-placeholder,
+textarea::-webkit-input-placeholder,
+textarea:-moz-placeholder {
+  color: #babbbe !important;
+}
+
 .form-control:focus-visible {
   outline: unset !important;
 }
@@ -161,6 +169,6 @@
   .form-control {
     height: 40px;
     font-size: 0.875rem;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
 }

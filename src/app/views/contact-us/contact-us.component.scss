@@ -2,11 +2,13 @@
   .contact-bg {
     height: 300px;
     width: 100%;
+    margin-top: 5rem;
   }
 
   .contact-form-section {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5rem;
 
     .event-details-list {
       margin: 2.5rem 0;
@@ -52,6 +54,7 @@
   .contact-section {
     .contact-bg {
       height: 250px;
+      margin-top: 2rem;
     }
 
     .contact-form-section {
@@ -96,9 +99,9 @@
 
       .form-container {
         order: 1;
-        padding: 1.7rem;
-        width: 90%;
-        margin: -100px auto 4rem;
+        padding: 1.5rem;
+        width: 92%;
+        margin: -100px auto 3rem;
       }
     }
   }

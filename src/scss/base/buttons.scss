@@ -54,7 +54,16 @@
   }
 }
 
-@media screen and (min-width: 640px) {
+// @media screen and (max-width: 335px) {
+//   .btn {
+//     font-size: 0.875rem;
+//     font-weight: 500;
+//     min-height: 2rem;
+//     padding: 0.2rem 0.85rem;
+//   }
+// }
+
+@media screen and (max-width: 640px) {
   .btn {
     font-size: 0.95rem;
     min-height: 2.5rem;
@@ -62,11 +71,4 @@
   }
 }
 
-@media screen and (min-width: 335px) {
-  .btn {
-    font-size: 0.875rem;
-    font-weight: 500;
-    min-height: 2rem;
-    padding: 0.2rem 0.85rem;
-  }
-}
+
