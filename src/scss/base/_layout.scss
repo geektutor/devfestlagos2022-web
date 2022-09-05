@@ -19,9 +19,6 @@
     padding-left: 15px;
   }
 
-  @include md {
-  }
-
   @include lg {
     max-width: 89%;
   }
@@ -31,6 +28,19 @@
   }
 }
 
+.container-lg {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include lg {
+    max-width: 89%;
+  }
+
+  @include xl {
+    max-width: 1500px;
+  }
+}
 
 .section-spacing {
   margin: 5rem auto;

@@ -11,7 +11,11 @@
 }
 
 .sect--header {
-  margin: 0 0 2.5rem 0;
+  margin: 0 0 1.45rem 0;
+
+  @include md {
+    margin: 0 0 2.5rem 0;
+  }
 
   @include lg {
     margin: 0 0 4rem 0;
@@ -22,9 +26,13 @@
   margin: 0 0 5rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 1.9375rem;
-  row-gap: 3rem;
   justify-items: center;
+  column-gap: 0.65rem;
+  row-gap: 3rem;
+
+  @include md {
+    column-gap: 1.9375rem;
+  }
 
   @include lg {
     margin: 0 0 1rem 0;
@@ -44,7 +52,7 @@
   }
 
   @include max-sm {
-    width: 38vw;
+    width: 40vw;
   }
 
   @include lg {

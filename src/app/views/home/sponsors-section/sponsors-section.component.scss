@@ -1,7 +1,7 @@
 @use "/src/scss/abstracts/mixins" as *;
 
 .sponsors--sect {
-  padding: 6rem 0;
+  padding: 5rem 0 6rem 0;
 
   @include lg {
     padding: 8rem 0 10rem 0;
