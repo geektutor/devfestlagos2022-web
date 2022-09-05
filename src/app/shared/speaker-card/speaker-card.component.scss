@@ -1,3 +1,5 @@
+@use "/src/scss/abstracts/mixins" as *;
+
 :host {
   display: inline-block;
   width: 100%;
@@ -65,12 +67,24 @@
 
 .speaker--name {
   font-weight: 500;
-  font-size: 1.55rem;
-  margin: 0 0 1.45rem 0;
+  font-size: 1.25rem;
+  letter-spacing: 0.02rem;
+  line-height: 120%;
+  margin: 0 0 1rem 0;
+
+  @include md {
+    margin: 0 0 1.45rem 0;
+
+  }
 }
 
 .speaker--job-title {
+  margin: 0 0 0.45rem 0;
+  line-height: 150%;
+
+  @include md {
   margin: 0 0 0.8rem 0;
+  }
 }
 
 .speaker--company {
