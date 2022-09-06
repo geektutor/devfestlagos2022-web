@@ -7,14 +7,14 @@
         class="d22-logo"
       />
     </a>
-    <!-- class: site-nav__open -->
-    <nav class="site-nav" [ngClass]="{ 'site-nav__open': isNavOpen }" #nav>
+    <!-- class: site-nav__open, isNavOpen -->
+    <nav class="site-nav"  [ngClass]="{ 'site-nav__open': isNavOpen }">
       <a class="mobile-reg-btn btn btn-blue"> Register </a>
       <button class="nav--btn" (click)="toggleNav()">
-        <!-- <div class="hmb"></div>
         <div class="hmb"></div>
-        <div class="hmb"></div> -->
-        <img src="../../../assets/images/icons/menu-icon.svg" alt="menu icon" />
+        <div class="hmb"></div>
+        <div class="hmb"></div>
+        <!-- <img src="../../../assets/images/icons/menu-icon.svg" alt="menu icon" /> -->
 
         <span class="visually-hidden">Navigation Menu</span>
       </button>

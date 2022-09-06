@@ -4,11 +4,11 @@
  *  Mixins
  */
 
- @mixin xtny {
-  @media only screen and (min-width: 0px) {
-    @content;
-  }
-}
+//  @mixin xtny {
+//   @media only screen and (min-width: 0px) {
+//     @content;
+//   }
+// }
 
 @mixin tny {
   @media only screen and (min-width: 335px) {
