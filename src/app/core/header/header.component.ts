@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,13 @@ export class HeaderComponent implements OnInit {
 
   isNavOpen: boolean = false;
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.router.events.subscribe(e => {
+      if (e instanceof NavigationStart) {
+          this.isNavOpen = false
+      }
+  });
+  }
 
   ngOnInit(): void {
   }

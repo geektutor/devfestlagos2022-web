@@ -7,7 +7,7 @@
   align-items: center;
 
   @include sm {
-    padding: 6rem 0 4rem 0;
+    padding: 6.2rem 0 4rem 0;
   }
 
   @include lg {
@@ -38,7 +38,7 @@
 
 .sect--title {
   line-height: 140%;
-  max-width: 32rem;
+  max-width: 30rem;
   @include lg {
   }
 }
