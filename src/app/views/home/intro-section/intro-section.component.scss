@@ -7,11 +7,10 @@
   align-items: center;
 
   @include sm {
-    padding: 6rem 0 5rem 0;
+    padding: 6rem 0 4rem 0;
   }
 
   @include lg {
-    padding: 10rem 0 5.5rem 0;
     align-items: initial;
     margin: auto;
     display: grid;
