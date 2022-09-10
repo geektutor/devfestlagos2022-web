@@ -1,0 +1,180 @@
+.session-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.session-card {
+  margin-bottom: 3rem;
+
+  .title {
+    color: #4285f4;
+    font-weight: 700;
+    font-size: 2.15rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .avatar-holder {
+    display: flex;
+    align-items: center;
+
+    .avatar-container {
+      background-image: url("../../../assets/images/social-avatar/devfest-2022-social-avatar-blue.png");
+      background-size: contain;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+
+      img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+      }
+    }
+
+    .name {
+      font-weight: 500;
+      font-size: 1.25rem;
+    }
+  }
+
+  .action-icon-session {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1.5rem 0 2rem;
+
+    .date-time,
+    .location {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 0.4rem;
+      }
+
+      .text {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .detail {
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.875rem;
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .session-card {
+    margin-bottom: 2.5rem;
+
+    .title {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .avatar-holder {
+      .name {
+        font-size: 1.15rem;
+      }
+    }
+
+    .action-icon-session {
+      gap: 1rem;
+      margin: 1.2rem 0 1.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .session-card {
+    margin-bottom: 2rem;
+
+    .title {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+    }
+
+    .avatar-holder {
+      .avatar-container {
+        margin-right: 1rem;
+      }
+
+      .name {
+        font-size: 1rem;
+      }
+    }
+
+    .action-icon-session {
+      //   margin: 1.5rem 0 2rem;
+
+      .date-time,
+      .location {
+        .text {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .detail {
+      font-size: 0.95rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .session-container {
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .session-card {
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .avatar-holder {
+      display: flex;
+      align-items: center;
+
+      .avatar-container {
+        width: 40px;
+        height: 40px;
+        margin-right: 0.8rem;
+
+        img {
+          width: 35px;
+          height: 35px;
+        }
+      }
+
+      .name {
+        font-weight: 500;
+        font-size: 1.25rem;
+      }
+    }
+
+    .action-icon-session {
+      margin: 1rem 0 1.5rem;
+
+      .date-time,
+      .location {
+        .text {
+          font-size: 0.875rem;
+        }
+      }
+    }
+
+    .detail {
+      margin-right: 0.5rem;
+    }
+  }
+}
