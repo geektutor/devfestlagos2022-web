@@ -1,4 +1,12 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  ViewChild,
+  ElementRef,
+} from '@angular/core';
 
 @Component({
   selector: 'app-page-title',
@@ -13,6 +21,8 @@ export class PageTitleComponent implements OnInit {
   @Output() searchEvent = new EventEmitter<any>();
   @Output() selectFilterEvent = new EventEmitter<any>();
 
+  @ViewChild('showMobileSearch') showMobileSearch!: ElementRef;
+
   constructor() {}
 
   ngOnInit(): void {}
@@ -23,7 +33,24 @@ export class PageTitleComponent implements OnInit {
   };
 
   handleSelectFilter = (value: any) => {
-    console.log
+    console.log;
     this.selectFilterEvent.emit(value);
+  };
+
+  toggleMobileSearch = () => {
+    // show-input-for-mobile
+    if (
+      this.showMobileSearch.nativeElement.classList.value.includes(
+        'show-input-for-mobile'
+      )
+    ) {
+      this.showMobileSearch.nativeElement.classList.remove(
+        'show-input-for-mobile'
+      );
+    } else {
+      this.showMobileSearch.nativeElement.classList.add(
+        'show-input-for-mobile'
+      );
+    }
   };
 }
