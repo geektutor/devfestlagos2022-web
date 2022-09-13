@@ -53,13 +53,15 @@
     background: #34a853;
   }
 
-  @media screen and (max-width: 991.9px) {
-    .owl-carousel .owl-item {
-      width: 445px !important;
-    }
+  ::ng-deep {
+    @media screen and (max-width: 991.9px) {
+      .owl-carousel .owl-item {
+        width: 445px !important;
+      }
 
-    .owl-carousel .owl-stage-outer {
-      height: 260px;
+      .owl-carousel .owl-stage {
+        height: 260px !important;
+      }
     }
   }
 
