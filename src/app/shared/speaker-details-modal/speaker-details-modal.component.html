@@ -1,5 +1,32 @@
+<button
+  class="close-btn"
+  mat-icon-button
+  aria-label="close popup"
+  mat-dialog-close
+>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M18 6L6 18" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6 6L18 18" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+</button>
+
+
 <div class="speaker--img-wrp">
   <!-- TODO: Add failsafe silhoete abi how them dey spell am -->
   <div class="speaker--img-bg"></div>
-  <img src="assets/images/social-avatar/test-img.jpg" [alt]="'Photo of ' + data.name" class="speaker--img" />
+  <img
+    src="assets/images/social-avatar/test-img.jpg"
+    [alt]="'Photo of ' + data.name"
+    class="speaker--img"
+  />
 </div>
+
+<h2 class="speaker--name">{{ data.name }}</h2>
+<p class="speaker--job-title cl--grey-600">
+  {{ data.jobTitle
+  }}<span class="speaker--company" *ngIf="data.company">
+    &nbsp;@{{ data.company }}</span
+  >
+</p>
+<p class="speaker--desc">{{ data.description }}</p>

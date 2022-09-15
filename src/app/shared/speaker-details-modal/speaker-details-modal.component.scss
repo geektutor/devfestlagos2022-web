@@ -1,6 +1,24 @@
+@use '/src/scss/abstracts/mixins' as *;
+
+::ng-deep .mat-dialog-container {
+  width: 100vw !important;
+  min-height: 90vh !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  position: relative;
+}
+
 :host {
-  display: block;
+  flex: 1;
+  display: flex;
   width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
 }
 
 .speaker--img-wrp {
@@ -43,3 +61,47 @@
   height: 100%;
   transform: translateY(-50%);
 }
+
+.speaker--name {
+  font-weight: 500;
+  font-size: 1.56rem;
+  letter-spacing: 0.02rem;
+  line-height: 120%;
+  margin: 0 0 1rem 0;
+
+  @include md {
+    margin: 0 0 1.45rem 0;
+
+  }
+}
+
+.speaker--job-title {
+  display: inline-block;
+  margin: 0 0 0.45rem 0;
+  line-height: 150%;
+  @include md {
+  margin: 0 0 1.2rem 0;
+  }
+}
+
+.speaker--company {
+  font-weight: 500;
+}
+
+.speaker--desc {
+  line-height: 170%;
+  max-width: 48rem;
+}
+
+.close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: none;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+

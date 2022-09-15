@@ -23,12 +23,13 @@ export interface SpeakerInfoI {
 export class SpeakerCardComponent implements OnInit {
   @Input('data') speakerInfo: SpeakerInfoI | undefined;
   @Input('profileView') profileView: boolean = true;
+  @Input('shortBio') shortBio: boolean = true;
 
   constructor(private dialogRef: MatDialog) {
     this.speakerInfo = {
       name: 'Akinjobi Sodiq',
       description:
-        'Lorem ipsum dolor sit amet. Rem cupiditate velit est iste repellat et facilis quod. In reiciendis expedita quo enim animi et quia deserunt ea esse',
+        'Voted one of the Top 15 Business Growth Experts to Watch by Github, sales and leadership expert Meridith Elliott Powell. Voted one of the Top 15 Business Growth Experts to Watch by Github, sales and leadership expert Meridith Elliott Powell. Voted one of the Top 15 Business Growth Experts to Watch by Github, sales and leadership expert Meridith Elliott Powell. Voted one of the Top 15 Business Growth Experts to Watch by Github, sales and leadership expert Meridith Elliott Powell.',
       jobTitle: 'Meme King',
       company: 'Google',
       socials: {
@@ -38,10 +39,10 @@ export class SpeakerCardComponent implements OnInit {
     };
   }
 
-  profileViewClick(){
+  profileViewClick() {
     this.dialogRef.open(SpeakerDetailsModalComponent, {
-      data: this.speakerInfo
-    })
+      data: this.speakerInfo,
+    });
   }
 
   ngOnInit(): void {}
