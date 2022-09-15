@@ -11,8 +11,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-size: 1.025rem;
-  letter-spacing: 0.025em;
+  font-size: 1rem;
+  letter-spacing: 0.015em;
 }
 
 .speaker--img-wrp {
@@ -33,7 +33,7 @@
     position: absolute;
     z-index: 3;
 
-    transform: scale(1.06);
+    transform: scale(1.08);
     background-position: left;
     background-size: cover;
     background-position: center;
@@ -70,15 +70,14 @@
 
 .speaker--name {
   font-weight: 500;
-  // font-size: 1.25rem;
-  font-size: 1.56rem;
-  letter-spacing: 0.02rem;
+  font-size: 1.35rem;
   line-height: 120%;
   margin: 0 0 1rem 0;
 
   @include md {
+    font-size: 1.56rem;
+    letter-spacing: 0.02em;
     margin: 0 0 1.45rem 0;
-
   }
 }
 
@@ -97,8 +96,40 @@
 
 .speaker--desc {
   line-height: 170%;
+
+  @include max-lg {
+    display: none;
+  }
 }
 
 .profile-btn {
-  margin: 2.5rem 0 0 0;
+  margin: 1.5rem 0 0 0;
+
+  @include lg {
+    margin: 2.4rem 0 0 0;
+  }
+}
+
+.speaker--socials {
+
+  display: flex;
+  flex-direction: row;
+  margin: 1.2rem 0 0 0;
+  gap: 0.98rem;
+
+
+  @include lg {
+    gap: 0.85rem;
+    margin: 2.4rem 0 0 0;
+  }
+}
+
+
+.social--link {
+  display: block;
+  transform-origin: center;
+  transition-duration: 200ms scale;
+  &:hover {
+    transform: scale(1.2);
+  }
 }
