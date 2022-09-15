@@ -1,0 +1,45 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.speaker--img-wrp {
+  position: relative;
+  width: 18rem;
+  padding-bottom: 18rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 0 2rem 0;
+  letter-spacing: 0.02em;
+
+  &::after {
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+
+    transform: scale(1.06);
+    background-position: left;
+    background-size: cover;
+    background-position: center;
+  }
+
+  :host:nth-child(4n + 1)  &::after {
+    background-image: url("/assets/images/social-avatar/devfest-2022-social-avatar-blue.png");
+  }
+}
+
+.speaker--img {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  object-fit: cover;
+
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50%);
+}

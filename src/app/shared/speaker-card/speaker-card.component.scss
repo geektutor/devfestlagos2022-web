@@ -11,7 +11,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-size: 1.03rem;
+  font-size: 1.025rem;
+  letter-spacing: 0.025em;
 }
 
 .speaker--img-wrp {
@@ -21,6 +22,7 @@
   border-radius: 50%;
   overflow: hidden;
   margin: 0 0 2rem 0;
+  letter-spacing: 0.02em;
 
   &::after {
     content: "";
@@ -68,7 +70,8 @@
 
 .speaker--name {
   font-weight: 500;
-  font-size: 1.25rem;
+  // font-size: 1.25rem;
+  font-size: 1.56rem;
   letter-spacing: 0.02rem;
   line-height: 120%;
   margin: 0 0 1rem 0;
@@ -94,4 +97,8 @@
 
 .speaker--desc {
   line-height: 170%;
+}
+
+.profile-btn {
+  margin: 2.5rem 0 0 0;
 }

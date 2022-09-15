@@ -1,11 +1,20 @@
-<div class="container">
-  <app-page-title
-    [title]="title"
-    [hasSearch]="true"
-    [formDetails]="formData"
-    (handleSearch)="searchSpeaker($event)"
-    (handleSelectFilter)="selectSpeaker($event)"
-  ></app-page-title>
+<section>
+  <div class="container">
+    <app-page-title
+      [title]="title"
+      [hasSearch]="true"
+      [formDetails]="formData"
+      (handleSearch)="searchSpeaker($event)"
+      (handleSelectFilter)="selectSpeaker($event)"
+    ></app-page-title>
 
-  <section></section>
-</div>
+    <ul class="speakers--list">
+      <li class="speaker--item" app-speaker-card></li>
+      <li class="speaker--item" app-speaker-card></li>
+      <li class="speaker--item" app-speaker-card></li>
+      <li class="speaker--item" app-speaker-card></li>
+      <li class="speaker--item" app-speaker-card></li>
+      <li class="speaker--item" app-speaker-card></li>
+    </ul>
+  </div>
+</section>
