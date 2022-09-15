@@ -7,7 +7,7 @@
   align-items: center;
 
   @include sm {
-    padding: 6.2rem 0 4rem 0;
+    padding: 6.5rem 0 2.4rem 0;
   }
 
   @include lg {
@@ -44,8 +44,8 @@
 }
 
 .sect--lead {
-  line-height: 170%;
-  max-width: 31rem;
+  line-height: 200%;
+  max-width: 50rem;
   @include lg {
     max-width: 34rem;
   }
@@ -56,13 +56,13 @@
   width: fit-content;
 
   @include lg {
-    margin: 0 0 2rem 0;
+    margin: 0 0 2.35rem 0;
   }
 
   > p {
     width: fit-content;
     padding-left: 2.06rem;
-    font-size: 1.125rem;
+    font-size: 1.1rem;
     color: var(--color-grey-800);
     max-width: 20rem;
     line-height: 140%;

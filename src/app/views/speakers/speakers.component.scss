@@ -1,0 +1,28 @@
+@use "/src/scss/abstracts/_mixins.scss" as *;
+
+.speakers--list {
+  margin: 5rem 0 8rem 0;
+  display: grid;
+  row-gap: 7.125rem;
+  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  justify-content: space-between;
+  align-items: end;
+
+
+  @include md {
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+    column-gap: 6vw;
+  }
+}
+
+.speaker--item {
+  margin: auto;
+  width: 40vw;
+
+  @include md {
+    width: 100%;
+  }
+
+
+
+}
