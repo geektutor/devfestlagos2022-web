@@ -8,8 +8,14 @@
       />
     </a>
     <!-- class: site-nav__open, isNavOpen -->
-    <nav class="site-nav"  [ngClass]="{ 'site-nav__open': isNavOpen }">
-      <a class="mobile-reg-btn btn btn-blue"> Register </a>
+    <nav class="site-nav" [ngClass]="{ 'site-nav__open': isNavOpen }">
+      <a
+        class="mobile-reg-btn btn btn-blue"
+        href="https://gdg.community.dev/events/details/google-gdg-lagos-presents-devfest-lagos-2022/"
+        target="_blank"
+      >
+        Register
+      </a>
       <button class="nav--btn" (click)="toggleNav()">
         <div class="hmb"></div>
         <div class="hmb"></div>
@@ -55,7 +61,13 @@
           </a>
         </li>
         <li class="nav--item">
-          <a class="nav--link btn btn-blue"> Register </a>
+          <a
+            class="nav--link btn btn-blue"
+            target="_blank"
+            href="https://gdg.community.dev/events/details/google-gdg-lagos-presents-devfest-lagos-2022/"
+          >
+            Register
+          </a>
         </li>
       </ul>
     </nav>
