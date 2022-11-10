@@ -3,7 +3,8 @@
 :host {
   display: block;
   // background: rgb(255, 255, 242); //Yellow pastel bg
-  background: hsl(118, 100%, 97%);
+  // background: hsl(118, 100%, 97%);
+  background: hsl(45deg 99% 98%);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   // padding: 0.9rem;
 
@@ -55,4 +56,3 @@
     display: none;
   }
 }
-
