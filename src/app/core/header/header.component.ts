@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
     this.router.events.subscribe(e => {
       if (e instanceof NavigationStart) {
           this.isNavOpen = false
-      }
+      } 
   });
   }
 

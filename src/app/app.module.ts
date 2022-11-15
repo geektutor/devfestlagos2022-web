@@ -7,8 +7,13 @@ import { CoreModule } from './core/core.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { RouterModule } from '@angular/router';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { environment } from '../environments/environment';
+// import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+// import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
-@NgModule({
+@NgModule({ 
   declarations: [
     AppComponent,
     // RouterModule.,
@@ -17,9 +22,13 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     CoreModule,
     AppRoutingModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, // for firestore
+    // provideFirebaseApp(() => initializeApp(environment.firebase)),
+    // provideFirestore(() => getFirestore()),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {} 

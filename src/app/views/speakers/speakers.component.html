@@ -7,5 +7,9 @@
     (handleSelectFilter)="selectSpeaker($event)"
   ></app-page-title>
 
-  <section></section>
+  <section>
+    <ng-container *ngFor="let speaker of speakers">
+      <app-speaker-card [speakerInfo]="speaker"></app-speaker-card>
+    </ng-container>
+  </section>
 </div>

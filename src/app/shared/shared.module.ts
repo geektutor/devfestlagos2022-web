@@ -5,20 +5,23 @@ import { FaqAccordionComponent } from './faq-accordion/faq-accordion.component';
 import { MaterialImportsModule } from './material/material.module';
 import { VideoComponent } from './video/video.component';
 import { PageTitleComponent } from './page-title/page-title.component';
+import { SessionCardComponent } from './session-card/session-card.component';
 
 @NgModule({
   declarations: [
     SpeakerCardComponent,
     FaqAccordionComponent,
     VideoComponent,
-    PageTitleComponent
+    PageTitleComponent,
+    SessionCardComponent
   ],
   imports: [CommonModule, MaterialImportsModule],
   exports: [
     FaqAccordionComponent,
     SpeakerCardComponent,
     VideoComponent,
-    PageTitleComponent
+    PageTitleComponent,
+    SessionCardComponent
   ],
 })
 export class SharedModule {}

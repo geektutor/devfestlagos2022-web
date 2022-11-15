@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { map } from 'rxjs';
+import { AppService } from 'src/app/app.service';
 
 @Component({
   selector: 'app-sessions',
@@ -21,7 +24,28 @@ export class SessionsComponent implements OnInit {
     ],
   };
 
-  constructor() {}
+  sessions!: any[];
 
-  ngOnInit(): void {}
+  constructor(private appService: AppService) {}
+
+  ngOnInit(): void {
+    this.appService
+      .getAllSession('Session')
+      .snapshotChanges()
+      .pipe(
+        map((changes: any) =>
+          changes.map((c: any) => ({
+            id: c.payload.doc.id,
+            ...c.payload.doc.data(),
+            endTime: c.payload?.doc?.data()?.endTime.toDate(),
+            startTime: c.payload?.doc?.data()?.startTime.toDate(),
+          }))
+        )
+      )
+      .subscribe((data: any) => {
+        // console.log(data);
+        this.sessions = data;
+        // console.log(this.sessions);
+      });
+  }
 }
