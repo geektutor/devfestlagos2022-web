@@ -12,6 +12,6 @@ export class FaqAccordionComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log(this.faqList);
+    // console.log(this.faqList);
   }
 }

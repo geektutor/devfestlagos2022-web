@@ -16,7 +16,7 @@ export class VideoComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log(this.videoElement);
+    // console.log(this.videoElement);
   }
 
   play() {
