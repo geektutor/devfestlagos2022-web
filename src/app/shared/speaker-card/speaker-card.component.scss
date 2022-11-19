@@ -3,7 +3,11 @@
 :host {
   display: inline-block;
   width: 100%;
-  max-width: 340px;
+  max-width: 320px;
+
+  @include sm{
+    max-width: 300px;
+  }
 }
 
 .speaker--card {
@@ -20,7 +24,7 @@
   padding-bottom: 100%;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 0 2rem 0;
+  margin: 0 auto 2rem;
 
   &::after {
     content: "";
@@ -37,7 +41,7 @@
     background-position: center;
   }
 
-  :host:nth-child(4n + 1)  &::after {
+  :host:nth-child(4n + 1) &::after {
     background-image: url("/assets/images/social-avatar/devfest-2022-social-avatar-blue.png");
   }
 
@@ -67,24 +71,27 @@
 }
 
 .speaker--name {
+  font-family: Roboto Mono;
   font-weight: 500;
   font-size: 1.25rem;
   letter-spacing: 0.02rem;
   line-height: 120%;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.75rem 0;
 
   @include md {
-    margin: 0 0 1.45rem 0;
-
+    margin: 0 0 1.2rem 0;
   }
 }
 
 .speaker--job-title {
+  font-family: Roboto Mono;
   margin: 0 0 0.45rem 0;
   line-height: 150%;
+  font-size: 0.85rem;
+  min-height: 36px;
 
   @include md {
-  margin: 0 0 0.8rem 0;
+    margin: 0 0 0.8rem 0;
   }
 }
 
@@ -93,5 +100,17 @@
 }
 
 .speaker--desc {
+  font-family: Roboto Mono;
+  font-size: 1rem;
   line-height: 170%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+
+.speaker--socials {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem 0;
 }

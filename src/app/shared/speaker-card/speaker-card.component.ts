@@ -6,22 +6,18 @@ export interface SpeakerInfoI {
   role?: string;
   organization?: string;
   avatar?: string;
-  socials?: {
-    gitUrl?: string;
-    twitterUrl?: string;
-    linkedInUrl?: string;
-  }
+  github?: string;
+  twitter?: string;
+  linkedIn?: string;
 }
 
 @Component({
   selector: 'app-speaker-card',
   templateUrl: './speaker-card.component.html',
-  styleUrls: ['./speaker-card.component.scss']
+  styleUrls: ['./speaker-card.component.scss'],
 })
-
 export class SpeakerCardComponent implements OnInit {
-
-  @Input('speakerInfo') speakerInfo: SpeakerInfoI | undefined
+  @Input('speakerInfo') speakerInfo: SpeakerInfoI | undefined;
 
   constructor() {
     // this.speakerInfo = {
@@ -36,7 +32,5 @@ export class SpeakerCardComponent implements OnInit {
     // }
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

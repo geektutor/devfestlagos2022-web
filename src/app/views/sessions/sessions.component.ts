@@ -37,13 +37,13 @@ export class SessionsComponent implements OnInit {
           changes.map((c: any) => ({
             id: c.payload.doc.id,
             ...c.payload.doc.data(),
-            endTime: c.payload?.doc?.data()?.endTime.toDate(),
-            startTime: c.payload?.doc?.data()?.startTime.toDate(),
+            // endTime: c.payload?.doc?.data()?.endTime.toDate(),
+            // startTime: c.payload?.doc?.data()?.startTime.toDate(),
           }))
         )
       )
       .subscribe((data: any) => {
-        // console.log(data);
+        console.log(data);
         this.sessions = data;
         // console.log(this.sessions);
       });

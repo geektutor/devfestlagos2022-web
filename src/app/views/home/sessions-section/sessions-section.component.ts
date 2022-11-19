@@ -1,8 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { map } from 'rxjs';
-import { AppService } from 'src/app/app.service';
 
 @Component({
   selector: 'hm-sessions',
@@ -43,28 +40,9 @@ export class SessionsSectionComponent implements OnInit {
     nav: false,
   };
 
-  sessions!: any[];
+  @Input() sessions!: any[];
 
-  constructor(private appService: AppService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.appService
-      .getAllSession('Session')
-      .snapshotChanges()
-      .pipe(
-        map((changes: any) =>
-          changes.map((c: any) => ({
-            id: c.payload.doc.id,
-            ...c.payload.doc.data(),
-            endTime: c.payload?.doc?.data()?.endTime.toDate(),
-            startTime: c.payload?.doc?.data()?.startTime.toDate(),
-          }))
-        )
-      )
-      .subscribe((data: any) => {
-        // console.log(data);
-        this.sessions = data;
-        // console.log(this.sessions);
-      });
-  }
+  ngOnInit(): void {}
 }

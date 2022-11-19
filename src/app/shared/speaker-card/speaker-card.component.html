@@ -3,7 +3,7 @@
     <!-- TODO: Add failsafe silhoete abi how them dey spell am -->
     <div class="speaker--img-bg"></div>
     <img
-      src="assets/images/social-avatar/test-img.jpg"
+      [src]="speakerInfo.avatar"
       [alt]="'Photo of ' + speakerInfo.name"
       class="speaker--img"
     />
@@ -12,9 +12,9 @@
     <h2 class="speaker--name cl--blue-500">{{ speakerInfo.name }}</h2>
     <p class="speaker--job-title cl--grey-600">
       {{ speakerInfo.role }}
-      <span class="speaker--company" *ngIf="speakerInfo.organization">
+      <!-- <span class="speaker--company" *ngIf="speakerInfo.organization">
         &nbsp;@{{ speakerInfo.organization }}
-      </span>
+      </span> -->
     </p>
   </header>
 
@@ -23,14 +23,26 @@
   </p>
 
   <ul class="speaker--socials social--list">
-    <li class="speaker--git social--item">
-      <a href="" class="social--link"></a>
+    <li class="speaker--git social--item" *ngIf="speakerInfo.github">
+      <a [href]="speakerInfo.github" target="_blank" class="social--link">
+        <img src="/assets/images/icons/Github-devFest.svg" alt="Github" />
+      </a>
     </li>
-    <li class="speaker--twitter social--item">
-      <a href="" class="social--link"></a>
+    <li class="speaker--twitter social--item" *ngIf="speakerInfo.twitter">
+      <a [href]="speakerInfo.twitter" target="_blank" class="social--link">
+        <img
+          src="../../../assets/images/icons/Twitter-devFest.svg"
+          alt="Github"
+        />
+      </a>
     </li>
-    <li class="speaker--linkedin social--item">
-      <a href="" class="social--link"></a>
+    <li class="speaker--linkedin social--item" *ngIf="speakerInfo.linkedIn">
+      <a [href]="speakerInfo.linkedIn" target="_blank" class="social--link">
+        <img
+          src="../../../assets/images/icons/LinkedIn_devFest.svg"
+          alt="Github"
+        />
+      </a>
     </li>
   </ul>
 </article>

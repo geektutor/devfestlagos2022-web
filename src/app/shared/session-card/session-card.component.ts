@@ -4,11 +4,15 @@ export interface ISessionCard {
   id?: string;
   title?: string;
   status?: string;
-  venue?: string | any;
+  hall?: string | any;
   speaker?: string | any;
+  owner?: string | any;
+  description?:  string | any;
+  speakerImage?: string | undefined;
   category?: string | any;
   endTime?: Date | undefined;
-  startTime?: Date | undefined;
+  scheduledAt?: Date | undefined;
+  scheduledDuration?: Date | undefined;
 }
 
 @Component({

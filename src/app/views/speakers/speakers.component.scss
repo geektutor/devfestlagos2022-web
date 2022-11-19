@@ -1,0 +1,52 @@
+@use "/src/scss/abstracts/mixins" as *;
+
+.main--section{
+    margin: 3.5rem 0 7rem;
+}
+
+.speakers--list {
+    margin: 0 0 5rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    column-gap: 0.65rem;
+    row-gap: 3rem;
+  
+    @include md {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1.9375rem;
+    }
+  
+    @include lg {
+      margin: 0 0 1rem 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5rem 7%;
+    }
+  }
+  
+  .speaker--item {
+  
+    @include max-lg {
+      width: 30vw;
+      max-width: 15.6rem;
+    }
+  
+    @include max-sm {
+      width: 40vw;
+    }
+  
+    @include lg {
+      margin-bottom: 5rem;
+      // width: 100%;
+    }
+    @include max-lg {
+      // 3rd card stays in the middle
+      &:nth-child(3n) {
+        grid-column-start: 1;
+        grid-column-end: -1;
+      }
+    }
+  }

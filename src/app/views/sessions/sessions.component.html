@@ -1,11 +1,15 @@
-<div class="container">
+<ng-container *ngIf="!sessions">
+  <app-loader></app-loader>
+</ng-container>
+
+<div class="container" *ngIf="sessions">
   <app-page-title
     [title]="title"
     [hasSearch]="true"
     [formDetails]="formData"
   ></app-page-title>
 
-  <section *ngIf="sessions">
+  <section class="main-section" *ngIf="sessions">
     <div class="session-container">
       <app-session-card
         [sessionInfo]="session"

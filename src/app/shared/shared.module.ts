@@ -24,4 +24,5 @@ import { SessionCardComponent } from './session-card/session-card.component';
     SessionCardComponent
   ],
 })
-export class SharedModule {}
+export class SharedModule {} 
+  

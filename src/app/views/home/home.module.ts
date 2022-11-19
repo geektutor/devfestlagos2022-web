@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { CoreModule } from 'src/app/core/core.module';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { BannerSectionComponent } from './banner-section/banner-section.component';
@@ -32,7 +33,8 @@ import { IntroSectionComponent } from './intro-section/intro-section.component';
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-    CarouselModule
+    CarouselModule,
+    CoreModule
   ]
 })
 export class HomeModule { }

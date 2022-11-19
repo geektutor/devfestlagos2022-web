@@ -1,7 +1,14 @@
+// .main-section {
+//   display: flex;
+//   justify-content: center;
+//   width: 90%;
+// }
+
 .session-container {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 5rem;
 }
 
 .session-card {
