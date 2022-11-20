@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
       .pipe(
         map((changes: any) =>
           changes.map((c: any) => {
-            console.log(c);
+            // console.log(c);
             const id = c.payload.doc.id;
             const data = c.payload.doc.data();
 
@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
         )
       )
       .subscribe((data: any) => {
-        console.log(data);
+        // console.log(data);
         this.sessions = data;
       });
   }
@@ -80,7 +80,9 @@ export class HomeComponent implements OnInit {
       )
       .subscribe((data: any) => {
         // console.log(data);
-        this.speakers = data;
+        this.speakers = data.sort((a: any, b: any) => {
+          return a.order - b.order;
+        });
         // console.log(this.speakers);
       });
   }

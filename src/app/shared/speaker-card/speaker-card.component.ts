@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { SpeakerPopupComponent } from '../speaker-popup/speaker-popup.component';
 
 export interface SpeakerInfoI {
   name: string;
@@ -19,7 +21,7 @@ export interface SpeakerInfoI {
 export class SpeakerCardComponent implements OnInit {
   @Input('speakerInfo') speakerInfo: SpeakerInfoI | undefined;
 
-  constructor() {
+  constructor(public dialog: MatDialog) {
     // this.speakerInfo = {
     //   name: "Akinjobi Sodiq",
     //   bio: "Omo Ologo 5G spending with infinite range, Gojo Saturo from Mushin",
@@ -33,4 +35,17 @@ export class SpeakerCardComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  openSpeaker(
+    data: any,
+    enterAnimationDuration: string,
+    exitAnimationDuration: string
+  ) {
+    this.dialog.open(SpeakerPopupComponent, {
+      data,
+      enterAnimationDuration,
+      exitAnimationDuration,
+      panelClass: 'speaker--popup',
+    });
+  }
 }

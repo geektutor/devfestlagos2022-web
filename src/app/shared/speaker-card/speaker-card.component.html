@@ -1,5 +1,5 @@
 <article class="speaker--card" *ngIf="speakerInfo">
-  <div class="speaker--img-wrp">
+  <div class="speaker--img-wrp" (click)="openSpeaker(speakerInfo, '3000ms', '1500ms')">
     <!-- TODO: Add failsafe silhoete abi how them dey spell am -->
     <div class="speaker--img-bg"></div>
     <img

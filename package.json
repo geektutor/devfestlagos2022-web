@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^14.1.0",
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
+    "angularx-qrcode": "14.0.0",
     "firebase": "^9.14.0",
     "ngx-owl-carousel-o": "^14.0.1",
     "rxjs": "~7.5.0",

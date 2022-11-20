@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { QrcodeComponent } from './views/qrcode/qrcode.component';
+
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
+  },
+  {
+    path: 'get-qrcode-now',
+    component: QrcodeComponent,
   },
   {
     path: 'home',

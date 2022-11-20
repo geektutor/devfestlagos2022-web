@@ -1,12 +1,12 @@
-@use "/src/scss/abstracts/mixins" as *;
+@use "../../../scss/abstracts/mixins" as *;
 
-:host {
-  display: inline-block;
-  width: 100%;
-  max-width: 220px;
+.clode-section {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 0 1rem;
 
-  @include md{
-    max-width: 300px;
+  svg {
+    cursor: pointer;
   }
 }
 
@@ -16,6 +16,12 @@
   align-items: center;
   text-align: center;
   font-size: 1.03rem;
+}
+
+.img-size {
+  width: 130px;
+  height: 130px;
+  margin-bottom: 1rem;
 }
 
 .speaker--img-wrp {
@@ -75,25 +81,24 @@
   cursor: pointer;
   font-family: Roboto Mono;
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   letter-spacing: 0.02rem;
   line-height: 120%;
-  margin: 0 0 0.75rem 0;
+  margin: 0 0 0.5rem 0;
 
-  @include md {
-    margin: 0 0 1.2rem 0;
-  }
+  //   @include md {
+  //     margin: 0 0 rem 0;
+  //   }
 }
 
 .speaker--job-title {
   font-family: Roboto Mono;
   margin: 0 0 0.45rem 0;
   line-height: 150%;
-  font-size: 0.85rem;
-  min-height: 36px;
+  font-size: 0.75rem;
 
   @include md {
-    margin: 0 0 0.8rem 0;
+    margin: 0 0 0.5rem 0;
   }
 }
 
@@ -102,17 +107,20 @@
 }
 
 .speaker--desc {
-  font-family: Roboto Mono;
-  font-size: 1rem;
+  //   font-family: Roboto Mono;
+  font-size: 0.95rem;
   line-height: 170%;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
-  text-overflow: ellipsis;
 }
 
 .speaker--socials {
   display: flex;
   gap: 1rem;
-  margin: 0.5rem 0;
+  margin: 0 0 1.5rem;
+
+  .social--link {
+    img {
+      width: 15px;
+      height: 15px;
+    }
+  }
 }
