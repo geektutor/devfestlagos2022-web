@@ -41,13 +41,17 @@ export class SpeakersComponent implements OnInit {
       )
       .subscribe((data: any) => {
         // console.log(data);
-        this.speakers = data;
+        this.speakers = data.sort((a: any, b: any) => {
+          return a.order - b.order;
+        });
         // console.log(this.speakers);
       });
   }
 
   searchSpeaker = (event: any) => {
-    console.log(event);
+    const savedSpeakers = this.speakers
+
+    
   };
 
   selectSpeaker = (event: any) => {

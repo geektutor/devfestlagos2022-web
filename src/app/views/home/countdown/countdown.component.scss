@@ -1,0 +1,26 @@
+.countdown-container {
+  background: #c6dafc;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-container {
+  font-family: Digital-number;
+  text-align: center;
+  display: flex;
+  gap: 2.5rem;
+  color: #202124;
+
+  .number-title-container {
+    .number {
+      font-size: 1.625rem;
+      margin-bottom: 0.5rem;
+    }
+    .title {
+      font-family: Roboto Mono;
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-<div class="vid--container" [ngClass]="{ 'vid--container-pause': !currentState }">
+<div class="vid--container" [ngClass]="{ 'vid--container-pause': currentState }">
   <!-- Video element outlet -->
   <ng-content></ng-content>
   <div class="vid--controls" *ngIf="!currentState">

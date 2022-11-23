@@ -41,7 +41,13 @@ export class HomeComponent implements OnInit {
       )
       .subscribe((data: any) => {
         // console.log(data);
-        this.sessions = data;
+        this.sessions = data
+          .filter((session: any, index: number) => {
+            return index < 5;
+          })
+          .sort((a: any, b: any) => {
+            return a.order - b.order;
+          });
       });
   }
 
@@ -80,9 +86,13 @@ export class HomeComponent implements OnInit {
       )
       .subscribe((data: any) => {
         // console.log(data);
-        this.speakers = data.sort((a: any, b: any) => {
-          return a.order - b.order;
-        });
+        this.speakers = data
+          .filter((speaker: any, index: number) => {
+            return index < 8;
+          })
+          .sort((a: any, b: any) => {
+            return a.order - b.order;
+          });
         // console.log(this.speakers);
       });
   }

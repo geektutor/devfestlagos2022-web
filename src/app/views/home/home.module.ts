@@ -14,6 +14,7 @@ import { GallerySectionComponent } from './gallery-section/gallery-section.compo
 import { EventsDetailsSectionComponent } from './events-details-section/events-details-section.component';
 import { FaqSectionComponent } from './faq-section/faq-section.component';
 import { IntroSectionComponent } from './intro-section/intro-section.component';
+import { CountdownComponent } from './countdown/countdown.component';
 
 
 
@@ -27,7 +28,8 @@ import { IntroSectionComponent } from './intro-section/intro-section.component';
     GallerySectionComponent,
     EventsDetailsSectionComponent,
     FaqSectionComponent,
-    IntroSectionComponent
+    IntroSectionComponent,
+    CountdownComponent
   ],
   imports: [
     CommonModule,

@@ -20,6 +20,7 @@ export interface SpeakerInfoI {
 })
 export class SpeakerCardComponent implements OnInit {
   @Input('speakerInfo') speakerInfo: SpeakerInfoI | undefined;
+  @Input() entryType!: string;
 
   constructor(public dialog: MatDialog) {
     // this.speakerInfo = {
@@ -47,5 +48,14 @@ export class SpeakerCardComponent implements OnInit {
       exitAnimationDuration,
       panelClass: 'speaker--popup',
     });
+  }
+
+  getTwoLinDesc(desc: any) {
+    const splitDesc = desc.split(' ');
+    let newDesc = splitDesc.filter((desc: string, index: number) => {
+      return index < 6;
+    });
+
+    return `${newDesc.join(' ')}...`;
   }
 }

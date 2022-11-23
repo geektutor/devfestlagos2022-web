@@ -3,9 +3,9 @@
 :host {
   display: inline-block;
   width: 100%;
-  max-width: 220px;
+  max-width: 250px;
 
-  @include md{
+  @include md {
     max-width: 300px;
   }
 }
@@ -16,6 +16,14 @@
   align-items: center;
   text-align: center;
   font-size: 1.03rem;
+}
+
+.img-size {
+  width: 200px;
+
+  @include md {
+    width: 270px;
+  }
 }
 
 .speaker--img-wrp {
@@ -73,7 +81,7 @@
 
 .speaker--name {
   cursor: pointer;
-  font-family: Roboto Mono;
+  // font-family: Roboto Mono;
   font-weight: 500;
   font-size: 1.25rem;
   letter-spacing: 0.02rem;
@@ -86,14 +94,21 @@
 }
 
 .speaker--job-title {
-  font-family: Roboto Mono;
-  margin: 0 0 0.45rem 0;
-  line-height: 150%;
+  // font-family: Roboto Mono;
+  margin: 0 auto 0.75rem;
+  // line-height: 150%;
   font-size: 0.85rem;
-  min-height: 36px;
+  // min-height: 36px;
+  // white-space: nowrap;
+  // overflow: hidden;
+  max-width: 90%;
+  line-height: 21px;
+  min-height: 42px;
+  // text-overflow: ellipsis;
 
   @include md {
-    margin: 0 0 0.8rem 0;
+    // width: 90%;
+    // margin: 0 auto 0.75rem;
   }
 }
 
@@ -102,17 +117,13 @@
 }
 
 .speaker--desc {
-  font-family: Roboto Mono;
+  // font-family: Roboto Mono;
   font-size: 1rem;
   line-height: 170%;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
-  text-overflow: ellipsis;
 }
 
 .speaker--socials {
   display: flex;
   gap: 1rem;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 1.5rem;
 }

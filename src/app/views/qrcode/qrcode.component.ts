@@ -7,8 +7,9 @@ import { QRCodeElementType } from 'angularx-qrcode';
   styleUrls: ['./qrcode.component.scss'],
 })
 export class QrcodeComponent implements OnInit {
-  url: string = '';
-  public elementType!: QRCodeElementType
+  url: string = 'https://us-central1-devfestlagos-2022.cloudfunctions.net/api/checkin';
+
+  elementType = "canvas" as QRCodeElementType
 
   constructor() {}
 
@@ -45,7 +46,7 @@ export class QrcodeComponent implements OnInit {
       const link = document.createElement('a');
       link.href = url;
       // name of the file
-      link.download = 'Qrcode';
+      link.download = 'DevFest-Lagos-2022-Qrcode';
       link.click();
     }
   }

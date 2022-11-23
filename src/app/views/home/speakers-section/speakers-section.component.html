@@ -6,7 +6,10 @@
 
     <div class="speakers--list">
       <ng-container class="speaker--item" *ngFor="let speaker of speakers">
-        <app-speaker-card [speakerInfo]="speaker"></app-speaker-card>
+        <app-speaker-card
+          [speakerInfo]="speaker"
+          [entryType]="'home-page'"
+        ></app-speaker-card>
       </ng-container>
     </div>
   </div>
