@@ -45,6 +45,8 @@ const routes: Routes = [
         (m) => m.ContactUsModule
       ),
   },
+  { path: 'verify-ticket', loadChildren: () => import('./verfiy-ticket/verfiy-ticket.module').then(m => m.VerfiyTicketModule) },
+  { path: 'team', loadChildren: () => import('./team/team.module').then(m => m.TeamModule) },
   {
     path: '**',
     redirectTo: 'home',
