@@ -17,7 +17,7 @@
   }
 
   @include lg {
-    margin: 0 0 3.8rem 0;
+    margin: 0 0 2.5rem 0;
   }
 }
 
@@ -57,8 +57,10 @@
   }
 
   @include lg {
+
     margin-bottom: 5rem;
     // width: 100%;
+
   }
   @include max-lg {
     // 3rd card stays in the middle

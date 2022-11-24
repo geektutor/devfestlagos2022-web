@@ -1,0 +1,107 @@
+@use '/src/scss/abstracts/mixins' as *;
+
+::ng-deep .mat-dialog-container {
+  width: 100vw !important;
+  min-height: 90vh !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  position: relative;
+}
+
+:host {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.speaker--img-wrp {
+  position: relative;
+  width: 18rem;
+  padding-bottom: 18rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 0 2rem 0;
+  letter-spacing: 0.02em;
+
+  &::after {
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+
+    transform: scale(1.06);
+    background-position: left;
+    background-size: cover;
+    background-position: center;
+  }
+
+  :host:nth-child(4n + 1)  &::after {
+    background-image: url("/assets/images/social-avatar/devfest-2022-social-avatar-blue.png");
+  }
+}
+
+.speaker--img {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  object-fit: cover;
+
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50%);
+}
+
+.speaker--name {
+  font-weight: 500;
+  font-size: 1.56rem;
+  letter-spacing: 0.02rem;
+  line-height: 120%;
+  margin: 0 0 1rem 0;
+
+  @include md {
+    margin: 0 0 1.45rem 0;
+
+  }
+}
+
+.speaker--job-title {
+  display: inline-block;
+  margin: 0 0 0.45rem 0;
+  line-height: 150%;
+  @include md {
+  margin: 0 0 1.2rem 0;
+  }
+}
+
+.speaker--company {
+  font-weight: 500;
+}
+
+.speaker--desc {
+  line-height: 170%;
+  max-width: 48rem;
+}
+
+.close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: none;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+

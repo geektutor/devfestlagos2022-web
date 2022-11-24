@@ -9,6 +9,7 @@ import { PageTitleComponent } from './page-title/page-title.component';
 import { SessionCardComponent } from './session-card/session-card.component';
 import { SpeakerPopupComponent } from './speaker-popup/speaker-popup.component';
 
+
 @NgModule({
   declarations: [
     SpeakerCardComponent,
@@ -17,6 +18,9 @@ import { SpeakerPopupComponent } from './speaker-popup/speaker-popup.component';
     PageTitleComponent,
     SessionCardComponent,
     SpeakerPopupComponent,
+
+ 
+
   ],
   imports: [CommonModule, MaterialImportsModule, MatDialogModule],
   exports: [

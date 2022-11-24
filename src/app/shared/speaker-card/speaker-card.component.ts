@@ -11,6 +11,7 @@ export interface SpeakerInfoI {
   github?: string;
   twitter?: string;
   linkedIn?: string;
+
 }
 
 @Component({
@@ -58,4 +59,5 @@ export class SpeakerCardComponent implements OnInit {
 
     return `${newDesc.join(' ')}...`;
   }
+
 }
