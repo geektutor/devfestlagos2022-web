@@ -1,48 +1,69 @@
 <article class="speaker--card" *ngIf="speakerInfo">
-
-  <div class="speaker--img-wrp">
-    <!-- TODO: Add failsafe silhoete abi how them dey spell am -->
-    <div class="speaker--img-bg"></div>
-    <img src="assets/images/social-avatar/test-img.jpg" [alt]="'Photo of ' + speakerInfo.name" class="speaker--img" />
+  <div class="img-size">
+    <div
+      class="speaker--img-wrp"
+      (click)="openSpeaker(speakerInfo, '3000ms', '1500ms')"
+    >
+      <!-- TODO: Add failsafe silhoete abi how them dey spell am -->
+      <div class="speaker--img-bg"></div>
+      <img
+        [src]="speakerInfo.avatar"
+        [alt]="'Photo of ' + speakerInfo.name"
+        class="speaker--img"
+      />
+    </div>
   </div>
   <header>
-    <h2 class="speaker--name  cl--grey-900">{{ speakerInfo.name }}</h2>
+    <h2
+      class="speaker--name cl--blue-500"
+      (click)="openSpeaker(speakerInfo, '3000ms', '1500ms')"
+    >
+      {{ speakerInfo.name }}
+    </h2>
+
     <p class="speaker--job-title cl--grey-600">
-      {{ speakerInfo.jobTitle }}<span class="speaker--company" *ngIf="speakerInfo.company"> &nbsp;@{{ speakerInfo.company }}</span>
+      {{ speakerInfo.role }}
+      <!-- <span class="speaker--company" *ngIf="speakerInfo.organization">
+        &nbsp;@{{ speakerInfo.organization }}
+      </span> -->
     </p>
   </header>
 
-  <p class="speaker--desc cl--grey-600">
-    {{ shortBio ? (speakerInfo.description | slice: 0:110) + '...'  : speakerInfo.description }}
-  </p>
 
-  <ul class="speaker--socials">
-    <li class="speaker--git social--item">
-      <a href="" class="social--link">
-        <span class="visually-hidden" aria-labelledby="">
-          GitHub Profile
-        </span>
-        <img src="assets/images/gh.svg" alt="github-logo">
-      </a>
-    </li>
-    <li class="speaker--twitter social--item">
-      <a href="" class="social--link">
-        <span class="visually-hidden" aria-labelledby="">
-          Twitter Profile
-        </span>
-        <img src="assets/images/twitter.svg" alt="github-logo">
-      </a>
-    </li>
-    <li class="speaker--linkedin social--item">
-      <a href="" class="social--link">
-        <span class="visually-hidden" aria-labelledby="">
-          LinkedIn Profile
-        </span>
-        <img src="assets/images/linkedin.svg" alt="github-logo">
-      </a>
-    </li>
+  <!-- <p class="speaker--desc cl--grey-600">
+    {{ getTwoLinDesc(speakerInfo.bio) }}
+  </p> -->
 
+  <ul class="speaker--socials social--list">
+    <li class="speaker--git social--item" *ngIf="speakerInfo.github">
+      <a [href]="speakerInfo.github" target="_blank" class="social--link">
+        <img src="/assets/images/icons/Github-devFest.svg" alt="Github" />
+      </a>
+    </li>
+    <li class="speaker--twitter social--item" *ngIf="speakerInfo.twitter">
+      <a [href]="speakerInfo.twitter" target="_blank" class="social--link">
+        <img
+          src="../../../assets/images/icons/Twitter-devFest.svg"
+          alt="Github"
+        />
+      </a>
+    </li>
+    <li class="speaker--linkedin social--item" *ngIf="speakerInfo.linkedIn">
+      <a [href]="speakerInfo.linkedIn" target="_blank" class="social--link">
+        <img
+          src="../../../assets/images/icons/LinkedIn_devFest.svg"
+          alt="Github"
+        />
+      </a>
+    </li>
   </ul>
 
-  <button class="btn btn-outline_blue profile-btn" *ngIf="profileView" (click)="profileViewClick()">View Profile</button>
+  <button
+    *ngIf="entryType === 'speakers-page'"
+    class="btn btn-outline_blue"
+    (click)="openSpeaker(speakerInfo, '3000ms', '1500ms')"
+  >
+    View Profile
+  </button>
+
 </article>

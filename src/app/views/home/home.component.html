@@ -1,23 +1,32 @@
-<!-- Banner Section -->
-<hm-banner></hm-banner>
+<ng-container *ngIf="!speakers && !sponsors && !speakers">
+  <app-loader></app-loader>
+</ng-container>
 
-<!-- Intro section -->
-<hm-intro></hm-intro>
+<ng-container>
+  <!-- Countdown section -->
+  <!-- <app-countdown></app-countdown> -->
 
-<!-- Some Speakers Section -->
-<!-- <hm-speakers></hm-speakers> -->
+  <!-- Banner Section -->
+  <hm-banner></hm-banner>
 
-<!-- Sponsors Section -->
-<hm-sponsors></hm-sponsors>
+  <!-- Intro section -->
+  <hm-intro></hm-intro>
 
-<!-- Session Section -->
-<!-- <hm-sessions></hm-sessions> -->
+  <!-- Some Speakers Section -->
+  <hm-speakers [speakers]="speakers"></hm-speakers>
 
-<!-- Gallery section -->
-<hm-gallery></hm-gallery>
+  <!-- Sponsors Section -->
+  <hm-sponsors [sponsors]="sponsors"></hm-sponsors>
 
-<!-- Event section -->
-<hm-events-details></hm-events-details>
+  <!-- Session Section -->
+  <hm-sessions [sessions]="sessions"></hm-sessions>
 
-<!-- FAQ section -->
-<hm-faq></hm-faq>
+  <!-- Gallery section -->
+  <hm-gallery></hm-gallery>
+
+  <!-- Event section -->
+  <hm-events-details></hm-events-details>
+
+  <!-- FAQ section -->
+  <hm-faq></hm-faq>
+</ng-container>

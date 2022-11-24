@@ -1,20 +1,26 @@
-<section>
-  <div class="container">
-    <app-page-title
-      [title]="title"
-      [hasSearch]="true"
-      [formDetails]="formData"
-      (handleSearch)="searchSpeaker($event)"
-      (handleSelectFilter)="selectSpeaker($event)"
-    ></app-page-title>
 
-    <ul class="speakers--list">
-      <li class="speaker--item" app-speaker-card></li>
-      <li class="speaker--item" app-speaker-card></li>
-      <li class="speaker--item" app-speaker-card></li>
-      <li class="speaker--item" app-speaker-card></li>
-      <li class="speaker--item" app-speaker-card></li>
-      <li class="speaker--item" app-speaker-card></li>
-    </ul>
-  </div>
-</section>
+<ng-container *ngIf="!speakers">
+  <app-loader></app-loader>
+</ng-container>
+
+<div class="container" *ngIf="speakers">
+  <app-page-title
+    [title]="title"
+    [hasSearch]="true"
+    [formDetails]="formData"
+    (handleSearch)="searchSpeaker($event)"
+    (handleSelectFilter)="selectSpeaker($event)"
+  ></app-page-title>
+
+  <section class="main--section">
+    <div class="speakers--list">
+      <ng-container class="speaker--item" *ngFor="let speaker of speakers">
+        <app-speaker-card
+          [speakerInfo]="speaker"
+          [entryType]="'speakers-page'"
+        ></app-speaker-card>
+      </ng-container>
+    </div>
+  </section>
+</div>
+

@@ -1,0 +1,39 @@
+<div class="session-card">
+  <h3 class="title">{{ sessionInfo?.title }}</h3>
+  <div class="avatar-holder">
+    <div class="avatar-container">
+      <img [src]="sessionInfo?.speakerImage" alt="avatar" />
+    </div>
+    <p class="name">{{ sessionInfo?.owner }}</p>
+  </div>
+  <div class="action-icon-session">
+    <div class="date-time" *ngIf="sessionInfo?.scheduledAt ">
+      <img
+        src="../../../assets/images/icons/carlender-icon.svg"
+        alt="calendar"
+        width="18"
+        height="18"
+      />
+      <span class="text">
+        {{ sessionInfo?.scheduledAt | date: "h:mm a" }}
+        -
+        {{ sessionInfo?.scheduledDuration | date: "h:mm a" }} ; &nbsp;
+        {{ sessionInfo?.scheduledAt | date: "MMMM d, y" }}
+      </span>
+    </div>
+
+    <div class="location" *ngIf="sessionInfo?.hall">
+      <img
+        src="../../../assets/images/icons/location-icon.svg"
+        alt="calendar"
+        width="18"
+        height="18"
+      />
+      <span class="text">{{ sessionInfo?.hall }}</span>
+    </div>
+  </div>
+
+  <p class="detail">
+    {{ sessionInfo?.description }}
+  </p>
+</div>

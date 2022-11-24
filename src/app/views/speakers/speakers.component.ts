@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs';
+import { AppService } from 'src/app/app.service';
 
 @Component({
   selector: 'app-speakers',
@@ -21,12 +23,35 @@ export class SpeakersComponent implements OnInit {
     ],
   };
 
-  constructor() {}
+  speakers!: any[];
 
-  ngOnInit(): void {}
+  constructor(private appService: AppService) {}
+
+  ngOnInit(): void {
+    this.appService
+      .getAllSpeakers('Speaker')
+      .snapshotChanges()
+      .pipe(
+        map((changes: any) =>
+          changes.map((c: any) => ({
+            id: c.payload.doc.id,
+            ...c.payload.doc.data(),
+          }))
+        )
+      )
+      .subscribe((data: any) => {
+        // console.log(data);
+        this.speakers = data.sort((a: any, b: any) => {
+          return a.order - b.order;
+        });
+        // console.log(this.speakers);
+      });
+  }
 
   searchSpeaker = (event: any) => {
-    console.log(event);
+    const savedSpeakers = this.speakers
+
+    
   };
 
   selectSpeaker = (event: any) => {

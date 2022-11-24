@@ -1,0 +1,41 @@
+<section class="container">
+  <app-page-title
+    [title]="'Generated QR Code'"
+    [hasSearch]="false"
+  ></app-page-title>
+  <div class="qrcode-container">
+    <div class="qrcode-holder">
+      <!-- <div class="input-holder">
+        <input
+          type="text"
+          placeholder="Enter url to convert to qrcode"
+          class="input--field"
+          [value]="url"
+          disabled
+          #input
+        />
+      </div> -->
+
+      <!-- <button
+        class="btn btn-blue"
+        (click)="generateQrCode(input.value)"
+        *ngIf="!url"
+      >
+        Generate QRcode
+      </button> -->
+
+      <ng-container *ngIf="url">
+        <qrcode
+          #parent
+          [qrdata]="url"
+          [width]="300"
+          [errorCorrectionLevel]="'M'"
+        ></qrcode>
+
+        <button class="btn btn-blue" (click)="saveQrcode(parent)">
+          Download qrcode
+        </button>
+      </ng-container>
+    </div>
+  </div>
+</section>

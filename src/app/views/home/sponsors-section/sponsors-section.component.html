@@ -11,28 +11,15 @@
 
     <h2 class="visually-hidden">Sponsors list</h2>
     <ul class="sponsor--list">
-      <li class="sponsor--item">
-        <img
-          src="/assets/images/icons/sponsor1.svg"
-          alt=""
-          class="sponsor--img"
-        />
+      <li
+        class="sponsor--item"
+        *ngFor="let sponsor of sponsors"
+        (click)="routeToWebsite(sponsor.website)"
+      >
+        <img [src]="sponsor.logoUrl" alt="" class="sponsor--img" />
       </li>
-      <li class="sponsor--item">
-        <img
-          src="/assets/images/icons/sponsor2.svg"
-          alt=""
-          class="sponsor--img"
-        />
-      </li>
-      <li class="sponsor--item">
-        <img
-          src="/assets/images/icons/sponsor3.svg"
-          alt=""
-          class="sponsor--img"
-        />
-      </li>
-      <li class="sponsor--item">
+
+      <!-- <li class="sponsor--item">
         <img
           src="/assets/images/icons/sponsor2.svg"
           alt=""
@@ -60,6 +47,32 @@
           class="sponsor--img"
         />
       </li>
+      <li class="sponsor--item">
+        <img
+          src="/assets/images/icons/sponsor2.svg"
+          alt=""
+          class="sponsor--img"
+        />
+      </li>
+      <li class="sponsor--item">
+        <img
+          src="/assets/images/icons/sponsor3.svg"
+          alt=""
+          class="sponsor--img"
+        />
+      </li> -->
     </ul>
+
+    <!-- <marquee behaviour="scroll" direction="left" *ngIf="showScroller">
+      <ul class="sponsor--list">
+        <li
+          class="sponsor--item"
+          *ngFor="let sponsor of sponsors"
+          (click)="routeToWebsite(sponsor.website)"
+        >
+          <img [src]="sponsor.logoUrl" alt="" class="sponsor--img" />
+        </li>
+      </ul>
+    </marquee> -->
   </div>
 </section>

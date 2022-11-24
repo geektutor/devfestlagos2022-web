@@ -1,0 +1,70 @@
+@use "/src/scss/abstracts/mixins" as *;
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 2;
+  overflow: hidden;
+}
+
+.loader-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+
+  .images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    img {
+      width: 25%;
+
+      @include md {
+        width: 40%;
+      }
+    }
+  }
+
+  .gdg-logo {
+    width: 40%;
+    animation: pulse 1.5s linear infinite;
+
+    @include md{
+        width: 60%; 
+    }
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

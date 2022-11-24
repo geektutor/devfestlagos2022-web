@@ -1,0 +1,126 @@
+@use "../../../scss/abstracts/mixins" as *;
+
+.clode-section {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 0 1rem;
+
+  svg {
+    cursor: pointer;
+  }
+}
+
+.speaker--card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1.03rem;
+}
+
+.img-size {
+  width: 130px;
+  height: 130px;
+  margin-bottom: 1rem;
+}
+
+.speaker--img-wrp {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 2rem;
+
+  &::after {
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+
+    transform: scale(1.06);
+    background-position: left;
+    background-size: cover;
+    background-position: center;
+  }
+
+  :host:nth-child(4n + 1) &::after {
+    background-image: url("/assets/images/social-avatar/devfest-2022-social-avatar-blue.png");
+  }
+
+  :host:nth-child(4n + 2) &::after {
+    background-image: url("/assets/images/social-avatar/devfest-2022-social-avatar-red.png");
+  }
+
+  :host:nth-child(4n + 3) &::after {
+    background-image: url("/assets/images/social-avatar/devfest-2022-social-avatar-yellow.png");
+  }
+
+  :host:nth-child(4n + 4) &::after {
+    background-image: url("/assets/images/social-avatar/devfest-2022-social-avatar-green.png");
+  }
+}
+
+.speaker--img {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  object-fit: cover;
+
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50%);
+}
+
+.speaker--name {
+  cursor: pointer;
+  font-family: Roboto Mono;
+  font-weight: 500;
+  font-size: 1.15rem;
+  letter-spacing: 0.02rem;
+  line-height: 120%;
+  margin: 0 0 0.5rem 0;
+
+  //   @include md {
+  //     margin: 0 0 rem 0;
+  //   }
+}
+
+.speaker--job-title {
+  font-family: Roboto Mono;
+  margin: 0 0 0.45rem 0;
+  line-height: 150%;
+  font-size: 0.75rem;
+
+  @include md {
+    margin: 0 0 0.5rem 0;
+  }
+}
+
+.speaker--company {
+  font-weight: 500;
+}
+
+.speaker--desc {
+  //   font-family: Roboto Mono;
+  font-size: 0.95rem;
+  line-height: 170%;
+}
+
+.speaker--socials {
+  display: flex;
+  gap: 1rem;
+  margin: 0 0 1.5rem;
+
+  .social--link {
+    img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

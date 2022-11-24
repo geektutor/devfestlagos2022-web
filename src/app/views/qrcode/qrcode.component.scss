@@ -1,0 +1,48 @@
+@use "/src/scss/abstracts/mixins" as *;
+
+.qrcode-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+
+  .qrcode-holder {
+    width: 100%;
+    margin: 4rem auto;
+
+    .input-holder {
+      margin-bottom: 1.5rem;
+    }
+
+    .input--field {
+      height: 55px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+      padding: 0.25rem 1rem;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    button {
+      margin: 0 auto;
+    }
+
+    @include md {
+      width: 75%;
+    }
+  }
+
+  .error-text {
+    color: #cc0000;
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+}
+
+::ng-deep {
+  .qrcode {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}

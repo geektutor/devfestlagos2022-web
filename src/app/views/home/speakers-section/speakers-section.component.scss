@@ -24,22 +24,24 @@
 .speakers--list {
   margin: 0 0 5rem 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-items: center;
   column-gap: 0.65rem;
   row-gap: 3rem;
 
-  @include md {
+
+  @include sm {
+    grid-template-columns: 1fr 1fr;
     column-gap: 1.9375rem;
   }
 
   @include lg {
-    margin: 0 0 1rem 0;
+    margin: 0 0 4.5rem 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 7%;
+    gap: 4rem 7%;
   }
 }
 
@@ -55,8 +57,10 @@
   }
 
   @include lg {
-    margin-bottom: 6rem;
-    width: 100%;
+
+    margin-bottom: 5rem;
+    // width: 100%;
+
   }
   @include max-lg {
     // 3rd card stays in the middle

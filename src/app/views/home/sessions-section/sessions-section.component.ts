@@ -1,11 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-
 
 @Component({
   selector: 'hm-sessions',
   templateUrl: './sessions-section.component.html',
-  styleUrls: ['./sessions-section.component.scss']
+  styleUrls: ['./sessions-section.component.scss'],
 })
 export class SessionsSectionComponent implements OnInit {
   customOptions: OwlOptions = {
@@ -40,9 +39,10 @@ export class SessionsSectionComponent implements OnInit {
     },
     nav: false,
   };
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+  @Input() sessions!: any[];
 
+  constructor() {}
+
+  ngOnInit(): void {}
 }

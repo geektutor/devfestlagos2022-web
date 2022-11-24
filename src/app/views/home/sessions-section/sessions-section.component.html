@@ -12,38 +12,37 @@
           You're definitely in for a swell time.
         </p>
         <div class="btn-img-container">
-          <button class="btn view-session-btn">View All Sessions</button>
+          <button class="btn view-session-btn" routerLink="/sessions">
+            View All Sessions
+          </button>
           <img
-            src="../../../assets/images/DF22-footer.svg"
-            alt="DevFest 2022"
+            src="assets/images/Devfest-Lagos_white.svg"
+            alt="Devfest 2022 Logo"
+            class="d22-logo"
           />
         </div>
       </div>
 
       <div class="session-list">
         <owl-carousel-o [options]="customOptions">
-          <ng-template carouselSlide>
+          <ng-template carouselSlide *ngFor="let session of sessions">
             <div class="sesssion-card">
               <div class="profile">
-                <img
-                  src="../../../assets/images/avatar-me.jpg"
-                  alt="session photo"
-                />
-                <h5 class="name">Oluwatobi Peter</h5>
-                <P class="role">Software Developer,</P>
-                <P class="company">Google</P>
+                <img [src]="session.speakerImage" alt="session photo" />
+                <h5 class="name">{{ session.owner }}</h5>
+                <P class="role">{{ session?.tagLine }}</P>
+                <!-- <P class="company">Google</P> -->
               </div>
 
               <div class="detail">
                 <p class="location">Lagos, Nigeria</p>
                 <div class="desc">
-                  Implementing Micro-Frontend Architecture with Angular and
-                  other core Angukar Features
+                  {{ session.title }}
                 </div>
               </div>
             </div>
           </ng-template>
-          <ng-template carouselSlide>
+          <!-- <ng-template carouselSlide>
             <div class="sesssion-card">
               <div class="profile">
                 <img
@@ -84,7 +83,7 @@
                 </div>
               </div>
             </div>
-          </ng-template>
+          </ng-template> -->
         </owl-carousel-o>
       </div>
     </div>

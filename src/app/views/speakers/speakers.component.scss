@@ -1,27 +1,54 @@
-@use "/src/scss/abstracts/_mixins.scss" as *;
+
+@use "/src/scss/abstracts/mixins" as *;
+
+.main--section{
+    margin: 3.5rem 0 7rem;
+}
 
 .speakers--list {
-  margin: 5rem 0 8rem 0;
-  display: grid;
-  row-gap: 7.125rem;
-  grid-template-columns: repeat(2, minmax(min-content, 1fr));
-  justify-content: space-between;
-  align-items: end;
-
-
-  @include md {
-    grid-template-columns: repeat(3, minmax(min-content, 1fr));
-    column-gap: 6vw;
+    margin: 0 0 5rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    column-gap: 0.65rem;
+    row-gap: 3rem;
+  
+    @include sm {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1.9375rem;
+    }
+  
+    @include lg {
+      margin: 0 0 1rem 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5rem 7%;
+    }
   }
-}
-
-.speaker--item {
-  margin: auto;
-  width: 40vw;
-
-  @include md {
-    width: 100%;
+  
+  .speaker--item {
+  
+    @include max-lg {
+      width: 30vw;
+      max-width: 15.6rem;
+    }
+  
+    @include max-sm {
+      width: 40vw;
+    }
+  
+    @include lg {
+      margin-bottom: 5rem;
+      // width: 100%;
+    }
+    @include max-lg {
+      // 3rd card stays in the middle
+      &:nth-child(3n) {
+        grid-column-start: 1;
+        grid-column-end: -1;
+      }
+    }
   }
-
-}
 

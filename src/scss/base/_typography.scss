@@ -7,6 +7,14 @@
 
 @use "../abstracts/mixins" as *;
 
+@font-face {
+  font-family: "Digital-number";
+  src: url("../../assets/fonts/DigitalNumbers-Regular.woff") format("wofff"),
+    url("/assets/fonts/DigitalNumbers-Regular.woff") format("woff");
+  // font-weight: bold;
+  // font-style: normal;
+}
+
 /** Product Sans font */
 @font-face {
   font-family: "Product Sans";

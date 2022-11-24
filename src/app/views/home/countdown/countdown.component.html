@@ -1,0 +1,23 @@
+<section class="countdown-container" *ngIf="!isExpired">
+  <div class="timer-container">
+    <div class="number-title-container">
+      <div class="number" #showDays></div>
+      <div class="title">day</div>
+    </div>
+
+    <div class="number-title-container">
+      <div class="number" #showHours></div>
+      <div class="title">hr</div>
+    </div>
+
+    <div class="number-title-container">
+      <div class="number" #showMinutes></div>
+      <div class="title">min</div>
+    </div>
+
+    <div class="number-title-container">
+      <div class="number" #showSeconds></div>
+      <div class="title">sec</div>
+    </div>
+  </div>
+</section>

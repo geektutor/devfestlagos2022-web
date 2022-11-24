@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { CoreModule } from 'src/app/core/core.module';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { BannerSectionComponent } from './banner-section/banner-section.component';
@@ -13,6 +14,7 @@ import { GallerySectionComponent } from './gallery-section/gallery-section.compo
 import { EventsDetailsSectionComponent } from './events-details-section/events-details-section.component';
 import { FaqSectionComponent } from './faq-section/faq-section.component';
 import { IntroSectionComponent } from './intro-section/intro-section.component';
+import { CountdownComponent } from './countdown/countdown.component';
 
 
 
@@ -26,13 +28,15 @@ import { IntroSectionComponent } from './intro-section/intro-section.component';
     GallerySectionComponent,
     EventsDetailsSectionComponent,
     FaqSectionComponent,
-    IntroSectionComponent
+    IntroSectionComponent,
+    CountdownComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-    CarouselModule
+    CarouselModule,
+    CoreModule
   ]
 })
 export class HomeModule { }

@@ -4,13 +4,14 @@
       <h1 class="sect--title">Meet Some of our Speakers</h1>
     </header>
 
-    <ul class="speakers--list">
-      <li class="speaker--item" app-speaker-card [profileView]="false"></li>
-      <li class="speaker--item" app-speaker-card [profileView]="false"></li>
-      <li class="speaker--item" app-speaker-card [profileView]="false"></li>
-      <li class="speaker--item" app-speaker-card [profileView]="false"></li>
-      <li class="speaker--item" app-speaker-card [profileView]="false"></li>
-    </ul>
+    <div class="speakers--list">
+      <ng-container class="speaker--item" *ngFor="let speaker of speakers">
+        <app-speaker-card
+          [speakerInfo]="speaker"
+          [entryType]="'home-page'"
+        ></app-speaker-card>
+      </ng-container>
+    </div>
   </div>
 
   <a routerLink="/speakers" class="btn btn-outline_blue speakers-link">
