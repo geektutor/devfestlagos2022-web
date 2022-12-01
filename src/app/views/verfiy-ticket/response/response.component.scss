@@ -1,0 +1,50 @@
+@use "../../../../scss/abstracts/mixins" as *;
+
+.close-container {
+  display: flex;
+  justify-content: flex-end;
+
+  .close-btn {
+    margin-left: auto;
+    cursor: pointer;
+  }
+}
+
+.res {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+
+  img {
+    margin: 1.5rem auto;
+  }
+
+  .main-text,
+  .desc {
+    margin: 0rem auto 1.2rem;
+  }
+
+  .main-text {
+    font-weight: 500;
+    font-size: 1.4rem;
+    width: 90%;
+
+    @include md {
+      font-size: 1.7rem;
+      width: 80%;
+    }
+  }
+
+  .desc {
+    font-size: 0.9rem;
+    font-weight: 400;
+    width: 97%;
+    margin-bottom: 2rem;
+
+    @include md {
+      font-size: 1rem;
+      width: 85%;
+    }
+  }
+}

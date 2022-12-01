@@ -1,12 +1,12 @@
 
 <ng-container *ngIf="!speakers">
   <app-loader></app-loader>
-</ng-container>
+</ng-container> 
 
 <div class="container" *ngIf="speakers">
   <app-page-title
     [title]="title"
-    [hasSearch]="true"
+    [hasSearch]="false"
     [formDetails]="formData"
     (handleSearch)="searchSpeaker($event)"
     (handleSelectFilter)="selectSpeaker($event)"

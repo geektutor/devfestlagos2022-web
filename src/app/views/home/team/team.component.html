@@ -1,0 +1,25 @@
+<section class="team--sect" *ngIf="organizers">
+  <div class="container">
+    <div class="header-section">
+      <h3 class="title">Meet the Team</h3>
+      <p class="sub-title">
+        Behind every great project, there’s a team determined to make it
+        outstanding.
+      </p>
+    </div>
+
+    <div class="details">
+      <!-- <img src="../../../../assets/images/devFest-team-info.png" /> -->
+
+      <ul class="overlapping-avatar-list">
+        <li *ngFor="let organizer of organizers">
+          <img [src]="organizer.avatar" />
+        </li>
+      </ul>
+
+      <button routerLink="/team" class="btn btn-outline_blue">
+        View Team Members
+      </button>
+    </div>
+  </div>
+</section>

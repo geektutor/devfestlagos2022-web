@@ -15,6 +15,7 @@ import { EventsDetailsSectionComponent } from './events-details-section/events-d
 import { FaqSectionComponent } from './faq-section/faq-section.component';
 import { IntroSectionComponent } from './intro-section/intro-section.component';
 import { CountdownComponent } from './countdown/countdown.component';
+import { TeamComponent } from './team/team.component';
 
 
 
@@ -29,7 +30,8 @@ import { CountdownComponent } from './countdown/countdown.component';
     EventsDetailsSectionComponent,
     FaqSectionComponent,
     IntroSectionComponent,
-    CountdownComponent
+    CountdownComponent,
+    TeamComponent
   ],
   imports: [
     CommonModule,

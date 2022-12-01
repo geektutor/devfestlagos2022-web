@@ -1,11 +1,11 @@
 <ng-container *ngIf="!sessions">
   <app-loader></app-loader>
-</ng-container>
+</ng-container> 
 
 <div class="container" *ngIf="sessions">
   <app-page-title
     [title]="title"
-    [hasSearch]="true"
+    [hasSearch]="false"
     [formDetails]="formData"
   ></app-page-title>
 
@@ -14,7 +14,8 @@
       <app-session-card
         [sessionInfo]="session"
         *ngFor="let session of sessions"
-      ></app-session-card>
+      >
+      </app-session-card>
       <!-- <div class="session-card" *ngFor="let session of sessions">
         <h3 class="title">{{ session.title }}</h3>
         <div class="avatar-holder">

@@ -6,8 +6,8 @@
     </div>
     <p class="name">{{ sessionInfo?.owner }}</p>
   </div>
-  <div class="action-icon-session">
-    <div class="date-time" *ngIf="sessionInfo?.scheduledAt ">
+  <div class="action-icon-session" *ngIf="sessionInfo?.scheduledAt ">
+    <div class="date-time" >
       <img
         src="../../../assets/images/icons/carlender-icon.svg"
         alt="calendar"

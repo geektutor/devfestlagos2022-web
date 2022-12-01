@@ -8,7 +8,7 @@ import { VideoComponent } from './video/video.component';
 import { PageTitleComponent } from './page-title/page-title.component';
 import { SessionCardComponent } from './session-card/session-card.component';
 import { SpeakerPopupComponent } from './speaker-popup/speaker-popup.component';
-
+import { AgendaCardComponent } from './agenda-card/agenda-card.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +18,7 @@ import { SpeakerPopupComponent } from './speaker-popup/speaker-popup.component';
     PageTitleComponent,
     SessionCardComponent,
     SpeakerPopupComponent,
-
- 
-
+    AgendaCardComponent,
   ],
   imports: [CommonModule, MaterialImportsModule, MatDialogModule],
   exports: [
@@ -29,6 +27,7 @@ import { SpeakerPopupComponent } from './speaker-popup/speaker-popup.component';
     VideoComponent,
     PageTitleComponent,
     SessionCardComponent,
+    AgendaCardComponent,
   ],
   entryComponents: [SpeakerPopupComponent],
 })
