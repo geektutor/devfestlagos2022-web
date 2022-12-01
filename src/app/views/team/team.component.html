@@ -1,0 +1,32 @@
+<ng-container *ngIf="!contributors">
+  <app-loader></app-loader>
+</ng-container>
+
+<div class="container" *ngIf="contributors">
+  <app-page-title [title]="title" [hasSearch]="false"></app-page-title>
+
+  <section class="main--section">
+    <div class="title">Organizers</div>
+    <div class="speakers--list">
+      <ng-container class="speaker--item" *ngFor="let organizer of organizers">
+        <app-speaker-card
+          [speakerInfo]="organizer"
+          [entryType]="'organizer'"
+        ></app-speaker-card>
+      </ng-container>
+    </div>
+
+    <div class="title">Contributors</div>
+    <div class="speakers--list">
+      <ng-container
+        class="speaker--item"
+        *ngFor="let contributor of contributors"
+      >
+        <app-speaker-card
+          [speakerInfo]="contributor"
+          [entryType]="'contributor'"
+        ></app-speaker-card>
+      </ng-container>
+    </div>
+  </section>
+</div>

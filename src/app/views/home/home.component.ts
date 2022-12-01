@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   speakers!: any[];
   sponsors!: any[];
   sessions!: any[];
+  organizers!: any[];
 
   ngOnInit(): void {
     this.getSessions();
@@ -19,6 +20,8 @@ export class HomeComponent implements OnInit {
     this.getSponsors();
 
     this.getSpeakers();
+
+    this.getOrganizers()
   }
 
   getSessions() {
@@ -94,6 +97,31 @@ export class HomeComponent implements OnInit {
             return a.order - b.order;
           });
         // console.log(this.speakers);
+      });
+  }
+
+  getOrganizers() {
+    this.appService
+      .getAllSpeakers('Organizer')
+      .snapshotChanges()
+      .pipe(
+        map((changes: any) =>
+          changes.map((c: any) => ({
+            id: c.payload.doc.id,
+            ...c.payload.doc.data(),
+          }))
+        )
+      )
+      .subscribe((data: any) => {
+        // console.log(data);
+        this.organizers = data
+          .filter((speaker: any, index: number) => {
+            return index < 5;
+          })
+          .sort((a: any, b: any) => {
+            return a.order - b.order;
+          });
+        // console.log(this.organizers);
       });
   }
 }

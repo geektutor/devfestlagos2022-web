@@ -6,12 +6,14 @@ export interface SpeakerInfoI {
   name: string;
   bio?: string;
   role?: string;
+  tagline?: string;
   organization?: string;
   avatar?: string;
+  image?: string;
   github?: string;
   twitter?: string;
   linkedIn?: string;
-
+  portfolio?: string;
 }
 
 @Component({
@@ -60,4 +62,7 @@ export class SpeakerCardComponent implements OnInit {
     return `${newDesc.join(' ')}...`;
   }
 
+  gotToPortfolio(url: any) {
+    window.open(url, '_blank');
+  }
 }

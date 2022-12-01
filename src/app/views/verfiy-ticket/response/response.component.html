@@ -1,0 +1,49 @@
+<div class="close-container">
+  <button
+    class="close-btn"
+    mat-icon-button
+    aria-label="close popup"
+    mat-dialog-close
+    (click)="closeDialog()"
+  >
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18 6L6 18"
+        stroke="black"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M6 6L18 18"
+        stroke="black"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+</div>
+
+<div class="res" *ngIf="data.isSuccess">
+  <img src="../../../../assets/images/sucess-emoji.png" class="img" />
+
+  <h5 class="main-text">Welcome to DevFest Lagos🤗</h5>
+
+  <p class="desc">
+    We are glad to have you at DevFest 2022. We hope this becomes a memorable
+    event for you! Stay awesome! 🥰
+  </p>
+</div>
+
+<div class="res" *ngIf="!data.isSuccess">
+  <img src="../../../../assets/images/failed.png" class="img" />
+
+  <h5 class="main-text">User did not register 😢</h5>
+
+  <p class="desc">It seems this user did not register before the deadline.</p>
+</div>

@@ -1,0 +1,41 @@
+<ng-container *ngIf="isLoading">
+  <app-loader></app-loader>
+</ng-container>
+
+<div class="container">
+  <!-- <app-page-title [title]="title" [hasSearch]="false"></app-page-title> -->
+
+  <section class="main--section">
+    <div class="ticket-card">
+      <h3 class="title">Verify your Ticket</h3>
+
+      <form [formGroup]="verifyForm" (ngSubmit)="onSubmit()">
+        <div class="input-holder">
+          <input
+            class="form-control"
+            type="email"
+            placeholder="Please enter attendee email"
+            formControlName="email"
+          />
+          <small
+            class="error-text"
+            *ngIf="
+              verfiyFormControl['email'].invalid &&
+              verfiyFormControl['email'].touched
+            "
+          >
+            {{ getErrorMessage("email") }}
+          </small>
+        </div>
+
+        <button
+          class="btn btn-blue"
+          type="submit"
+          [disabled]="verifyForm.invalid"
+        >
+          Verify
+        </button>
+      </form>
+    </div>
+  </section>
+</div>

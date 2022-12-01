@@ -25,5 +25,7 @@ export class SessionCardComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // console.log(this.sessionInfo)
+  }
 }

@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { QrcodeComponent } from './views/qrcode/qrcode.component';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -45,8 +44,23 @@ const routes: Routes = [
         (m) => m.ContactUsModule
       ),
   },
-  { path: 'verify-ticket', loadChildren: () => import('./verfiy-ticket/verfiy-ticket.module').then(m => m.VerfiyTicketModule) },
-  { path: 'team', loadChildren: () => import('./team/team.module').then(m => m.TeamModule) },
+  {
+    path: 'check-ticket',
+    loadChildren: () =>
+      import('./views/verfiy-ticket/verfiy-ticket.module').then(
+        (m) => m.VerfiyTicketModule
+      ),
+  },
+  {
+    path: 'team',
+    loadChildren: () =>
+      import('./views/team/team.module').then((m) => m.TeamModule),
+  },
+  {
+    path: 'agenda',
+    loadChildren: () =>
+      import('./views/agenda/agenda.module').then((m) => m.AgendaModule),
+  },  
   {
     path: '**',
     redirectTo: 'home',
@@ -54,13 +68,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-
   imports: [
     RouterModule.forRoot(routes, {
       scrollPositionRestoration: 'enabled',
     }),
   ],
   exports: [RouterModule],
-
 })
 export class AppRoutingModule {}

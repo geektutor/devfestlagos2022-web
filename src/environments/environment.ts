@@ -14,7 +14,7 @@ export const environment = {
     measurementId: 'G-CR8TKECQD9',
   },
   production: false,
-
+  baseUrl: "https://us-central1-devfestlagos-2022.cloudfunctions.net/api"
 };
 
 /*
