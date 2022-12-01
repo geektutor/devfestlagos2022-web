@@ -9,5 +9,6 @@ export const environment = {
     messagingSenderId: '163954857780',
     measurementId: 'G-CR8TKECQD9',
   },
-  production: true
+  production: true,
+  baseUrl: "https://us-central1-devfestlagos-2022.cloudfunctions.net/api"
 };

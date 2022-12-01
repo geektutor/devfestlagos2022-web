@@ -1,0 +1,28 @@
+<ng-container *ngIf="!agendas1">
+  <app-loader></app-loader>
+</ng-container>
+
+<div class="container" *ngIf="agendas1">
+  <app-page-title [title]="title" [hasSearch]="false"></app-page-title>
+
+  <section class="main-section" *ngIf="agendas1">
+    <div class="session-container">
+      <!-- <div> -->
+        <app-agenda-card
+          [agenda]="agenda"
+          [number]="i"
+          *ngFor="let agenda of agendas1; let i = index"
+        >
+        </app-agenda-card>
+      <!-- </div> -->
+      <!-- <div>
+        <app-agenda-card
+          [agenda]="agenda"
+          [number]="i"
+          *ngFor="let agenda of agendas2; let i = index"
+        >
+        </app-agenda-card>
+      </div> -->
+    </div>
+  </section>
+</div>

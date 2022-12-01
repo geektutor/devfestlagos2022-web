@@ -7,10 +7,12 @@ import { CoreModule } from './core/core.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { QRCodeModule } from 'angularx-qrcode';
 import { SharedModule } from './shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { RouterModule } from '@angular/router';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+// import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { environment } from '../environments/environment';
 import { QrcodeComponent } from './views/qrcode/qrcode.component';
 // import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -31,8 +33,7 @@ import { QrcodeComponent } from './views/qrcode/qrcode.component';
     SharedModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // for firestore
-    // provideFirebaseApp(() => initializeApp(environment.firebase)),
-    // provideFirestore(() => getFirestore()),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

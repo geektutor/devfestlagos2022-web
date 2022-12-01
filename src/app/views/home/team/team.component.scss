@@ -1,0 +1,101 @@
+@use "/src/scss/abstracts/mixins" as *;
+
+.team--sect {
+  background: #edeef1;
+  padding: 4rem 0 5rem 0;
+
+  @include lg {
+    padding: 6rem 0 7rem 0;
+  }
+
+  .header-section {
+    text-align: center;
+
+    .title {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  .details {
+    text-align: center;
+
+    .btn {
+      margin: auto;
+    }
+
+    // img {
+    //   margin: 1.5rem auto 2.7rem;
+    //   width: 220px;
+
+    //   @include md {
+    //     width: 300px;
+    //   }
+    // }
+  }
+
+  .overlapping-avatar-list {
+    list-style-type: none;
+    margin: 0 auto 2rem;
+    padding: 0;
+
+    li {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+    //   border: 2px solid white;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+      -webkit-transition: 0.2s ease;
+      transition: 0.2s ease;
+
+      img {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+      }
+
+      @include lg{
+        width: 70px;
+        height: 70px;
+
+        img {
+            width: 67px;
+            height: 67px;
+          }
+      }
+    }
+
+    li:nth-child(1) {
+      background: blue;
+      border-color: blue;
+    }
+    li:nth-child(2) {
+      background: green;
+      border-color: green;
+    }
+    li:nth-child(3) {
+      background: purple;
+      border-color: purple;
+    }
+    li:nth-child(4) {
+      background: tomato;
+      border-color: tomato;
+    }
+
+    li:nth-child(5) {
+      background: #fbc31d;
+      border-color: #fbc31d;
+    }
+
+    li:nth-child(n + 2) {
+      margin-left: -25px;
+    }
+
+    &:hover li:nth-child(n + 2) {
+      margin-left: -10px;
+    }
+  }
+}

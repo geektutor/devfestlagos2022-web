@@ -43,7 +43,7 @@ export class SessionsComponent implements OnInit {
         )
       )
       .subscribe((data: any) => {
-        console.log(data);
+        // console.log(data);
         this.sessions = data;
         // console.log(this.sessions);
       });

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QRCodeElementType } from 'angularx-qrcode';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-qrcode',
@@ -7,17 +8,19 @@ import { QRCodeElementType } from 'angularx-qrcode';
   styleUrls: ['./qrcode.component.scss'],
 })
 export class QrcodeComponent implements OnInit {
-  url: string = 'https://us-central1-devfestlagos-2022.cloudfunctions.net/api/checkin';
+  url: string = '';
 
   elementType = "canvas" as QRCodeElementType
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.url = `${environment.baseUrl}/checkin`
+  }
 
   generateQrCode(url: string) {
     this.url = url;
-    console.log(this.url);
+    // console.log(this.url);
   }
 
   saveQrcode(parent: any) {

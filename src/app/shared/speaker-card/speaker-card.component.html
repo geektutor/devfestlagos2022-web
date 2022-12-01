@@ -2,33 +2,41 @@
   <div class="img-size">
     <div
       class="speaker--img-wrp"
-      (click)="openSpeaker(speakerInfo, '3000ms', '1500ms')"
+      (click)="
+        entryType === 'speakers-page'
+          ? openSpeaker(speakerInfo, '3000ms', '1500ms')
+          : 0
+      "
     >
       <!-- TODO: Add failsafe silhoete abi how them dey spell am -->
       <div class="speaker--img-bg"></div>
       <img
-        [src]="speakerInfo.avatar"
+        [src]="speakerInfo.avatar ? speakerInfo.avatar : speakerInfo.image"
         [alt]="'Photo of ' + speakerInfo.name"
         class="speaker--img"
       />
     </div>
   </div>
   <header>
-    <h2
-      class="speaker--name cl--blue-500"
-      (click)="openSpeaker(speakerInfo, '3000ms', '1500ms')"
-    >
+    <h2 class="speaker--name cl--blue-500">
       {{ speakerInfo.name }}
     </h2>
 
     <p class="speaker--job-title cl--grey-600">
-      {{ speakerInfo.role }}
+      <ng-container *ngIf="speakerInfo.organization">
+        {{ speakerInfo.organization }}
+      </ng-container>
+      <ng-container *ngIf="speakerInfo.role && entryType === 'organizer'">
+        {{ speakerInfo.role }}
+      </ng-container>
+      <ng-container *ngIf="speakerInfo.tagline">
+        {{ speakerInfo.tagline }}
+      </ng-container>
       <!-- <span class="speaker--company" *ngIf="speakerInfo.organization">
         &nbsp;@{{ speakerInfo.organization }}
       </span> -->
     </p>
   </header>
-
 
   <!-- <p class="speaker--desc cl--grey-600">
     {{ getTwoLinDesc(speakerInfo.bio) }}
@@ -66,4 +74,11 @@
     View Profile
   </button>
 
+  <button
+    *ngIf="entryType === 'contributor'"
+    class="btn btn-outline_blue"
+    (click)="gotToPortfolio(speakerInfo?.portfolio)"
+  >
+    View Portfolio
+  </button>
 </article>

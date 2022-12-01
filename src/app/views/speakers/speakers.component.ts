@@ -55,6 +55,6 @@ export class SpeakersComponent implements OnInit {
   };
 
   selectSpeaker = (event: any) => {
-    console.log(event);
+    // console.log(event);
   };
 }

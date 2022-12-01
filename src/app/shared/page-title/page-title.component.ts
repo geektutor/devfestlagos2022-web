@@ -28,12 +28,12 @@ export class PageTitleComponent implements OnInit {
   ngOnInit(): void {}
 
   handleSearch = (value: any) => {
-    console.log(value);
+    // console.log(value);
     this.searchEvent.emit(value);
   };
 
   handleSelectFilter = (value: any) => {
-    console.log;
+    // console.log;
     this.selectFilterEvent.emit(value);
   };
 

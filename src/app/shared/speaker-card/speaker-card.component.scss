@@ -8,6 +8,10 @@
   @include md {
     max-width: 300px;
   }
+
+  // @include lg {
+  //   max-width: 350px;
+  // }
 }
 
 .speaker--card {
@@ -25,6 +29,10 @@
   @include md {
     width: 270px;
   }
+
+  @include lg {
+    width: 300px;
+  }
 }
 
 .speaker--img-wrp {
@@ -35,7 +43,6 @@
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 2rem;
-
 
   &::after {
     content: "";
@@ -91,7 +98,6 @@
 
   @include md {
     margin: 0 0 1.2rem 0;
-
   }
 }
 
@@ -105,10 +111,11 @@
   // overflow: hidden;
   max-width: 90%;
   line-height: 21px;
-  min-height: 42px;
+
   // text-overflow: ellipsis;
 
   @include md {
+    min-height: 42px;
     // width: 90%;
     // margin: 0 auto 0.75rem;
   }
@@ -137,19 +144,16 @@
 }
 
 .speaker--socials {
-
   display: flex;
   flex-direction: row;
   margin: 1.2rem 0 0 0;
   gap: 0.98rem;
-
 
   @include lg {
     gap: 0.85rem;
     margin: 2.4rem 0 0 0;
   }
 }
-
 
 .social--link {
   display: block;
@@ -163,5 +167,9 @@
 .speaker--socials {
   display: flex;
   gap: 1rem;
-  margin: 0.5rem 0 1.5rem;
+  margin: 0.25rem 0 1rem;
+
+  @include md {
+    margin: 0.5rem 0 1.5rem;
+  }
 }
